@@ -1,0 +1,237 @@
+.section-hero {
+  padding-top: 96px;
+}
+
+.hero-container {
+  position: relative;
+  margin-bottom: 72px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+/* Поставить Бек */
+  /* background-image: image-set(url(/src/img/decor-bg-mob.png) 1x, url(//src/img/decor-bg@2x.png) 2x); */
+}
+
+.title {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 125%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-family: Impact, sans-serif;
+}
+
+.hero-img {
+  display: none;
+}
+
+.span-title,
+.green-text {
+  color: var(--span-text-color);
+}
+
+.wrapp-hero {
+  cursor: pointer;
+  position: relative;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+
+.wrapp-arrow {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-arrow {
+  margin-right: 12px;
+}
+
+.hero-link {
+  cursor: pointer;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  z-index: 999;
+}
+
+.background-wrapp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--accent-background-color);
+  border-radius: 16px;
+  width: 165px;
+  height: 92px;
+}
+
+.hero-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-family: Poppins, sans-serif;
+}
+
+.hero-list {
+  background-color: var(--grey-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  gap: 24px;
+}
+
+.hero-item {
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-hero {
+    padding-top: 88px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-container {
+    margin-bottom: 80px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-container {
+
+    /* ПОСТАВИТЬ БЕК */
+    /* background-image: image-set(
+      url() 1x,
+      url() 2x
+    ); */
+    background-position: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    font-weight: 400;
+    font-size: 136px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapp-hero {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-link {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 160%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .background-wrapp {
+    left: 155px;
+    width: 261px;
+    height: 96px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-text {
+    font-size: 20px;
+    line-height: 160%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-list {
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .section-hero {
+    scroll-behavior: smooth;
+    padding-top: 184px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero-container {
+    padding: 0 32px;
+    min-width: 1280px;
+  }
+}
+
+/* @media only screen and (min-width: 1280px) {
+  .hero-container {
+    ПоСТАВИТЬ бЕК
+    background-image: image-set(
+      url() 1x,
+      url() 2x
+    );
+    background-position: center;
+  }
+} */
+
+@media only screen and (min-width: 1280px) {
+  .title {
+    font-family: Impact, sans-serif;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero-img {
+    display: inline-block;
+    border-radius: 16px;
+    width: 108px;
+    height: 108px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .wrapp-hero-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .wrapp-hero {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero-text {
+    max-width: 592px;
+  }
+}
