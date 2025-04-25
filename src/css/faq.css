@@ -13,10 +13,19 @@
     margin-bottom: 40px;
   }
 
+.faq-list .faq-item.ac {
+  margin-bottom: 0px;
+}
+
   .faq-item {
+    background-color: transparent;
     border-radius: 16px;
-    background-color: var(--accent-background-color);
+    margin-bottom: 0px;
   }
+
+    .faq-item.ac-active {
+    background-color: var(--accent-background-color);
+    }
 
   .faq-question {
     display: flex;
@@ -55,6 +64,7 @@
     padding-bottom: 28px;
     padding-left: 24px;
   }
+
 
   .faq-answer-item {
     font-family: 'Poppins', sans-serif;
