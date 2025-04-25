@@ -48,6 +48,7 @@
 
 .hero-arrow {
   margin-right: 12px;
+  fill: var(--span-text-color);
 }
 
 .hero-link {
