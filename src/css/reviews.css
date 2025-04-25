@@ -1,0 +1,17 @@
+/* #region ===== MOBILE STYLES ===== */
+
+
+
+/* #endregion */
+
+/* #region ===== TABLET STYLES ===== */
+
+@media only screen and (min-width: 768px) {}
+
+/* #endregion */
+
+/* #region ===== DESKTOP STYLES ===== */
+
+@media only screen and (min-width: 1280px) {}
+
+/* #endregion */
