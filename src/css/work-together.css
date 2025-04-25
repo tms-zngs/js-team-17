@@ -175,7 +175,7 @@
     .work-together {
         background-image: url('../img/decor/decor-form-desktop.png');
         background-repeat: no-repeat;
-        background-position: top right;
+        background-position: fixed;
         background-size: auto;
     }
 
