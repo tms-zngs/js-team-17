@@ -1,0 +1,121 @@
+.work-together {
+    margin-bottom: 80px;
+}
+
+.work-together-header {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.23;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+    margin-bottom: 40px;
+}
+
+.work-together-green-header {
+    color: var(--span-text-color);
+}
+
+.form-description {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+    margin-bottom: 32px;
+}
+
+.form-contact-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    margin-bottom: 40px;
+}
+
+
+.icon-form {
+    display: inline-flex;
+    margin-right: 16px;
+}
+
+.form-item-list:hover, 
+.form-item-list:focus {
+    color: var(--hover-green);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-address {
+    font-style: normal;
+    display: inline-flex;
+}
+
+.form-container {
+    display: flex;
+}
+
+.form-email {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    border-radius: 8px;
+    padding: 12px 16px;
+    width: 320px;
+    height: 48px;
+    background: var(--grey-background-color);
+    border-color: var(--grey-background-color);
+    margin-bottom: 32px;
+}
+
+.form-message {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    border-radius: 8px;
+    padding: 12px 16px;
+    width: 320px;
+    height: 128px;
+    background: var(--grey-background-color);
+    border-color: var(--grey-background-color);
+    resize: none;
+    margin-bottom: 32px;
+}
+
+
+.button-form {
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #f0f0f0;
+    border-color: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    width: 320px;
+    height: 48px;
+    background: var(--span-text-color);
+    border-color: var(--span-text-color);
+}
+
+.button-form:hover,
+.button-form:focus {
+    background-color: var(--hover-green);
+    border-color: var(--hover-green);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
