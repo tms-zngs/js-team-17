@@ -8,8 +8,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-/* Поставить Бек */
-  /* background-image: image-set(url(/src/img/decor-bg-mob.png) 1x, url(//src/img/decor-bg@2x.png) 2x); */
+  background-image: image-set(url(../img/decor/decor-hero-mobile.png));
 }
 
 .title {
@@ -112,12 +111,7 @@
 
 @media only screen and (min-width: 768px) {
   .hero-container {
-
-    /* ПОСТАВИТЬ БЕК */
-    /* background-image: image-set(
-      url() 1x,
-      url() 2x
-    ); */
+    background-image: image-set(url(../img/decor/decor-hero-desktop.png));
     background-position: center;
   }
 }
@@ -189,16 +183,12 @@
   }
 }
 
-/* @media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
   .hero-container {
-    ПоСТАВИТЬ бЕК
-    background-image: image-set(
-      url() 1x,
-      url() 2x
-    );
+    background-image: image-set(url(../img/decor/decor-hero-desktop.png));
     background-position: center;
   }
-} */
+}
 
 @media only screen and (min-width: 1280px) {
   .title {
