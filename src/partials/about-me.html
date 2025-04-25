@@ -2,13 +2,36 @@
   <div class="container">
     <div class="title-block">
       <h2 class="title-about">ABOUT <span class="title-me">ME</span></h2>
-      <img
-        class="title-img"
-        src="#"
-        alt="Lloyd Jefferson"
-        width="325"
-        height="374"
-      />
+      <picture>
+        <source
+          media="(min-width: 1280px)"
+          srcset="
+            /src/img/about-me/about-me-desktop-1x.jpg 1x,
+            /src/img/about-me/about-me-desktop-2x.jpg 2x
+          "
+        />
+        <source
+          media="(min-width: 760px)"
+          srcset="
+            /src/img/about-me/about-me-tablet-1x.jpg 1x,
+            /src/img/about-me/about-me-tablet-2x.jpg 2x
+          "
+        />
+        <source
+          media="(min-width: 360px)"
+          srcset="
+            /src/img/about-me/about-me-mobile-1x.jpg 1x,
+            /src/img/about-me/about-me-mobile-2x.jpg 2x
+          "
+        />
+        <img
+          class="title-img"
+          src="/src/img/about-me/about-me-mobile-1x.jpg"
+          alt="Lloyd Jefferson"
+          width="325"
+          height="374"
+        />
+      </picture>
     </div>
     <h3>BIO</h3>
     <p class="text-bio">

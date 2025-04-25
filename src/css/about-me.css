@@ -7,10 +7,25 @@
 .title-block {
 }
 .title-about {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: right;
+  color: var(--black);
 }
 .title-me {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: right;
+  color: var(--accet-green);
 }
 .title-img {
+  border-radius: 16px;
 }
 .text-bio {
 }
