@@ -40,10 +40,14 @@
     margin-bottom: 40px;
 }
 
-
 .icon-form {
     display: inline-flex;
     margin-right: 16px;
+}
+
+.form-item-list {
+    display: flex;
+    align-items: center;
 }
 
 .form-item-list:hover, 
@@ -61,6 +65,11 @@
     display: flex;
 }
 
+.icon-form {
+    stroke: var(--span-text-color);
+    fill: none;
+}
+
 .form-email {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -73,7 +82,7 @@
     width: 320px;
     height: 48px;
     background: var(--grey-background-color);
-    border-color: var(--grey-background-color);
+    border-color: transparent;
     margin-bottom: 32px;
 }
 
@@ -94,7 +103,6 @@
     margin-bottom: 32px;
 }
 
-
 .button-form {
     align-items: center;
     font-family: "Poppins", sans-serif;
@@ -104,18 +112,98 @@
     letter-spacing: 0.03em;
     text-align: center;
     color: #f0f0f0;
-    border-color: none;
+    border-color: transparent;
     border-radius: 8px;
     padding: 12px 24px;
-    width: 320px;
+    min-width: 320px;
     height: 48px;
     background: var(--span-text-color);
-    border-color: var(--span-text-color);
 }
 
 .button-form:hover,
 .button-form:focus {
     background-color: var(--hover-green);
-    border-color: var(--hover-green);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+    .work-together {
+        margin-bottom: 124px;
+        background-image: url('../img/decor/decor-form-tablet.png');
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: auto;
+    }
+
+    .work-together-header {
+        margin-top: 124px;
+        margin-bottom: 60px;
+        font-size: 108px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+    }
+
+    .form-description {
+        font-size: 20px;
+    }
+
+    .form-contact-list {
+        flex-direction: row;
+        column-gap: 16px;
+        margin-bottom: 60px;
+    }
+
+    .form-email {
+        width: 704px;
+        height: 48px;
+    }
+
+    .form-message {
+        width: 704px;
+        height: 128px;
+    }
+
+    .button-form {
+        min-width: 173px;
+        height: 48px;
+        padding: 12px 24px;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .work-together {
+        background-image: url('../img/decor/decor-form-desktop.png');
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: auto;
+    }
+
+    .header-container {
+        min-width: 507px;
+    }
+    .work-together-header {
+        margin-top: 164px;
+        margin-bottom: 80px;
+    }
+
+    .form-description {
+        margin-bottom: 120px;
+    }
+
+    .form-contact-list {
+        flex-direction: column;
+    }
+
+   .desc-nav-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+   }
+   
+   .section-wrapper {
+        display: flex;
+        flex-direction: row;
+        column-gap: 136px;
+   }
 }
