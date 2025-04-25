@@ -2,17 +2,6 @@ import { getResponse } from './get-api';
 
 const list = document.querySelector('.reviews-list');
 
-// createMarkup();
-
-// async function createMarkup() {
-//   const data = await getResponse();
-//   console.log(data);
-
-//   return data.forEach(({ _id, author, avatar_url, review }) => {
-
-//   });
-// }
-
 const fragment = document.createDocumentFragment();
 getResponse()
   .then(data => {
