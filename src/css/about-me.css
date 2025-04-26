@@ -5,7 +5,7 @@
 }
 
 .title-block {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .title-about {
   font-weight: 400;
@@ -15,6 +15,7 @@
   text-transform: uppercase;
   text-align: left;
   color: var(--main-text-color);
+  margin-bottom: 40px;
 }
 .title-me {
   font-weight: 400;
@@ -28,15 +29,142 @@
 .title-img {
   border-radius: 16px;
 }
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.bio-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  margin-bottom: 8px;
+}
+
 .text-bio {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
 }
-.list-bio {
+.education {
+  margin-bottom: 40px;
 }
-.list-bio-item {
+.education-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  margin-bottom: 32px;
+}
+
+.list-education {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list-education-item::before {
+  content: '';
+  display: inline-block;
+  border-radius: 1px;
+  height: 4px;
+  width: 4px;
+  background-color: green;
+  vertical-align: middle;
+  margin-right: 18px;
+}
+
+.list-education-item {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+.role-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  margin-bottom: 32px;
 }
 .list-role {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
+
+.list-role-item::before {
+  content: '';
+  display: inline-block;
+  border-radius: 1px;
+  height: 4px;
+  width: 4px;
+  background-color: green;
+  vertical-align: middle;
+  margin-right: 14px;
+}
+
 .list-role-item {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
 }
 
 /* #end region */
+
+/* #region Styles for Tablet devices */
+
+@media only screen and (min-width: 768px) {
+  .about-me-container {
+  }
+
+  .title-about {
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+    margin-bottom: 408px;
+  }
+
+  .bio-title {
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+  }
+
+  .education-title {
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+  }
+
+  .role-title {
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+    background-image: url(../img/decor/decor-about-me-tablet.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top;
+  }
+}
+
+/* #endregion */
