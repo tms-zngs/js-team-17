@@ -1,9 +1,7 @@
-// Отримуємо елементи
 const form = document.getElementById('contact-form');
 const successModal = document.getElementById('success-modal');
 const closeModalBtn = document.querySelector('.close-modal');
 
-// Відправка форми
 form.addEventListener('submit', async function (e) {
   e.preventDefault();
 
