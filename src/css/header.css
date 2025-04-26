@@ -1,0 +1,137 @@
+<<<<<<< HEAD
+=======
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.logo {
+  color: var(--base-text-color);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.06em;
+  font-family: Impact, Arial, sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.logo-header-span {
+  color: var(--span-text-color);
+}
+
+input:checked + .slider {
+  background-color: var(--span-text-color);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+input:checked + .slider {
+  background-color: #292929;
+}
+
+.slider::before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background: #00b068;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation {
+  display: none;
+}
+
+.nav-item-head a:hover,
+.nav-item-head a:focus {
+  color: var(--span-text-color);
+}
+
+.burger-btn {
+  border: none;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.icon-burger {
+  fill: var(--main-text-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .header-container {
+    padding: 32px;
+  }
+
+  .logo {
+    font-size: 32px;
+    letter-spacing: 0.05em;
+    margin-right: auto;
+    }
+
+  .navigation {
+    display: flex;
+  }
+
+  .nav-list-head {
+    display: flex;
+    gap: 40px;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  .nav-item-head a {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    font-family: Poppins, sans-serif;
+  }
+
+  .theme-toggle-div {
+    margin-right: 40px;
+  }
+}
+>>>>>>> origin/main
