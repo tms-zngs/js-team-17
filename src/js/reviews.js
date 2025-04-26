@@ -12,7 +12,7 @@ getResponse()
         <p class="reviews-item-text">${review}</p>
         <div class="container-reviews-author">
           <img class="reviews-item-img" src="${avatar_url}" alt="${author}"/>
-          <p class="reviews-item-name">${author}</p>
+          <h3 class="reviews-item-name">${author}</h3>
         </div>
       </li>
       `;
