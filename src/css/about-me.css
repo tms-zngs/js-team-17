@@ -18,16 +18,11 @@
   margin-bottom: 40px;
 }
 .title-me {
-  font-weight: 400;
-  font-size: 52px;
-  line-height: 123%;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-align: right;
   color: var(--span-text-color);
 }
 .title-img {
   border-radius: 16px;
+  margin-bottom: 40px;
 }
 
 .bio {
@@ -126,12 +121,41 @@
   color: var(--main-text-color);
 }
 
-/* #end region */
+/* #endregion */
 
 /* #region Styles for Tablet devices */
 
 @media only screen and (min-width: 768px) {
-  .about-me-container {
+  .about-me-content {
+    display: flex;
+    gap: 32px;
+  }
+
+  .title-img {
+    flex-basis: calc(50% - 15px);
+    order: 1;
+    margin-top: 368px;
+  }
+
+  .bio {
+    flex-basis: calc(50% - 15px);
+    order: 2;
+    position: relative;
+  }
+
+  .education-role-wrapper {
+    display: flex;
+    gap: 32px;
+    flex-basis: 100%;
+  }
+
+  .education {
+    flex-basis: calc(50% - 15px);
+  }
+
+  .role {
+    flex-basis: calc(50% - 15px);
+    position: relative;
   }
 
   .title-about {
@@ -139,7 +163,7 @@
     line-height: 115%;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
-    margin-bottom: 408px;
+    margin-bottom: 40px;
   }
 
   .bio-title {
@@ -148,6 +172,19 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: var(--main-text-color);
+  }
+
+  .green-dots {
+    position: absolute;
+    top: 856px;
+    right: 32px;
+    width: 336px;
+    height: 252px;
+    background-image: url(../img/decor/decor-about-me-tablet.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    z-index: -1;
   }
 
   .education-title {
@@ -160,10 +197,6 @@
     font-size: 36px;
     line-height: 133%;
     letter-spacing: 0.01em;
-    background-image: url(../img/decor/decor-about-me-tablet.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: top;
   }
 }
 
