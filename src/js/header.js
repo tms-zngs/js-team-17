@@ -17,3 +17,20 @@ function toggleTheme() {
 }
 
 themeToggle.addEventListener("change", toggleTheme);
+
+
+
+
+  const openBurgerBtn = document.querySelector('.burger-btn'); // первая кнопка
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const closeModalBtn = document.querySelector('.modal-btn'); // кнопка закрытия в модалке
+
+  // Открыть модалку
+  openBurgerBtn.addEventListener('click', () => {
+    modalOverlay.classList.add('active');
+  });
+
+  // Закрыть модалку
+  closeModalBtn.addEventListener('click', () => {
+    modalOverlay.classList.remove('active');
+  });
