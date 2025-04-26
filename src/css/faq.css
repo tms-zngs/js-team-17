@@ -2,6 +2,7 @@
 .faq-title-accent-wrapper {
   color: var(--span-text-color)
 }
+
 .faq-title {
   font-size: 52px;
   line-height: 64px;
@@ -80,27 +81,30 @@ body.dark-mode .faq-item.ac-active {
   letter-spacing: 0.5px;
   }
 
+
 @media screen and (min-width: 768px) {
 
-  .faq-title {
-    font-size: 108px;
-    line-height: 124px;
-    margin-bottom: 60px;
+.faq-title {
+  font-size: 108px;
+  line-height: 124px;
+  margin-bottom: 60px;
   }
 
-  .faq-question {
-    justify-content: space-between;
-  }
+.faq-question {
+  justify-content: space-between;
+}
+.faq-question-title {
+  font-size: 20px;
+  line-height: 32px;
+}
 
-  .faq-question-title {
-    font-size: 20px;
-    line-height: 32px;
-  }
 
 }
 
 /* @media screen and (min-width: 1280px) {
 
+
 } */
+
 
 
