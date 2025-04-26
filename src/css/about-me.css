@@ -5,6 +5,7 @@
 }
 
 .title-block {
+  margin-bottom: 80px;
 }
 .title-about {
   font-weight: 400;
@@ -12,8 +13,8 @@
   line-height: 123%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  text-align: right;
-  color: var(--black);
+  text-align: left;
+  color: var(--main-text-color);
 }
 .title-me {
   font-weight: 400;
@@ -22,7 +23,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: right;
-  color: var(--accet-green);
+  color: var(--span-text-color);
 }
 .title-img {
   border-radius: 16px;
