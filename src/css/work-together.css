@@ -1,5 +1,6 @@
 .work-together {
     margin-bottom: 80px;
+
 }
 
 .work-together-header {
@@ -135,6 +136,12 @@
         background-size: auto;
     }
 
+    .header-container {
+        display: flex;
+        justify-content: flex-start;
+        max-width: 768px;
+    }
+
     .work-together-header {
         margin-top: 124px;
         margin-bottom: 60px;
@@ -175,13 +182,10 @@
     .work-together {
         background-image: url('../img/decor/decor-form-desktop.png');
         background-repeat: no-repeat;
-        background-position: fixed;
+        background-position: top right;
         background-size: auto;
     }
 
-    .header-container {
-        min-width: 507px;
-    }
     .work-together-header {
         margin-top: 164px;
         margin-bottom: 80px;
