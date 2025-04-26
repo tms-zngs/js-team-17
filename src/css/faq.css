@@ -4,6 +4,7 @@
 }
 
 .faq-title {
+  text-transform: uppercase;
   font-size: 52px;
   line-height: 64px;
   letter-spacing: 1.8px;
@@ -101,10 +102,48 @@ body.dark-mode .faq-item.ac-active {
 
 }
 
-/* @media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
 
+.faq {
+  position: relative;
+  overflow: hidden;
+  }
 
-} */
+.faq .container {
+  position: relative;
+  display: flex;
+  max-width: 1280px;
+  }
 
+.faq-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 526px;
+  height: 408px;
+  background-image: url('../img/decor/decor-faq-desktop.png');
+  background-repeat: no-repeat;
+  background-size: 526px 408px;
+  background-position: left bottom;
+  pointer-events: none;
+  z-index: -1;
+} 
+
+.faq-title {
+  width: 520px;
+  margin-right: 104px;
+  margin-bottom: 40px;
+}
+
+.faq-list{
+  margin-top: 276px;
+}
+
+.faq-question-title {
+  font-size: 16px;
+  line-height: 24px;
+} 
+
+}
 
 
