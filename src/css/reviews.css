@@ -16,16 +16,21 @@
   margin-bottom: 40px;
 }
 
-.reviews-list {
-  display: flex;
+.swiper {
+  max-width: 100%;
+  min-height: 360px;
+}
+
+.swiper-wrapper {
+  /* display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 32px;
+  gap: 32px; */
   margin-bottom: 24px;
 }
 
-.reviews-item {
+.swiper-slide {
   border-radius: 16px;
   padding: 32px;
   max-width: 320px;
@@ -83,9 +88,11 @@
   gap: 16px;
   max-width: 96px;
   min-height: 40px;
+  margin-left: auto;
 }
 
-.btn-nav {
+.swiper-button-prev,
+.swiper-button-next {
   border: 1px solid var(--main-text-color);
   background-color: transparent;
   border-radius: 8px;
@@ -96,8 +103,14 @@
   transition: background-color 250ms;
 }
 
-.btn-nav:hover {
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
   background-color: var(--grey-background-color);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
 }
 
 .btn-icon {
@@ -105,6 +118,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  stroke: var(--main-text-color);
+  fill: var(--main-background-color);
+  width: 24px !important;
+  height: 24px !important;
 }
 
 /* #endregion */
@@ -124,7 +141,11 @@
     margin-bottom: 60px;
   }
 
-  .reviews-item {
+  .swiper {
+    min-height: 360px;
+  }
+
+  .swiper-slide {
     max-width: 704px;
     min-height: 224px;
   }
@@ -143,7 +164,7 @@
 
 /* #region ===== DESKTOP STYLES REVIEWS ===== */
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
   .section-reviews {
     padding-bottom: 164px;
   }
@@ -152,17 +173,17 @@
     margin-bottom: 80px;
   }
 
-  .reviews-list {
-    display: flex;
+  .swiper-wrapper {
+    /* display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 24px; */
   }
 
-  .reviews-item {
+  .swiper-slide {
     max-width: 592px;
   }
 
@@ -176,7 +197,8 @@
     min-height: 48px;
   }
 
-  .btn-nav {
+  .swiper-button-prev,
+  .swiper-button-next {
     padding: 12px;
     width: 48px;
     height: 48px;
