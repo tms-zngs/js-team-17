@@ -92,7 +92,7 @@
 }
 
 .btn-nav:hover {
-  background-color: ;
+  background-color: var(--grey-background-color);
 }
 
 .btn-icon {
