@@ -36,11 +36,6 @@
   z-index: 2;
 }
 
-.wrapp-hero:hover .background-wrapp,
-.wrapp-hero:focus .background-wrapp {
-  background-color: var(--span-text-color);
-}
-
 .wrapp-arrow {
   display: flex;
   align-items: center;
@@ -67,10 +62,15 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--accent-background-color);
+  background-color: var(--span-text-color);
   border-radius: 16px;
   width: 165px;
   height: 92px;
+}
+
+.wrapp-hero:hover .background-wrapp,
+.wrapp-hero:focus .background-wrapp {
+  background-color: var(--hover-green);
 }
 
 .hero-text {
@@ -148,14 +148,13 @@
 @media only screen and (min-width: 1280px) {
   .section-hero {
     scroll-behavior: smooth;
-    padding-top: 184px;
+    
   }
-}
 
-@media only screen and (min-width: 1280px) {
   .hero-container {
     background-image: image-set(url(/img/decor/decor-hero-desktop.png));
     background-position: center 16px;
+    padding-top: 184px;
     margin-bottom: 164px;
   }
 
