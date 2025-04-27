@@ -106,7 +106,7 @@ color: var(--main-text-color);
 }
 .benefits-container {
     background-repeat: no-repeat;
-  background-position: center 16px;
+  background-position: top right 20px;
   background-size: auto;
   background-image: image-set(url(/img/decor/decor-benefits-desktop.png));
 }
@@ -115,7 +115,7 @@ color: var(--main-text-color);
     margin-bottom: -100px;
 }
 .benefits-list {
-    gap: 180px 32px;
+    gap: 32px;
 }
 .benefits-item.empty1,
 .benefits-item.empty2 {
