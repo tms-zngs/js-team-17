@@ -4,9 +4,6 @@
   margin-bottom: 80px;
 }
 
-.title-block {
-  margin-bottom: 40px;
-}
 .title-about {
   font-weight: 400;
   font-size: 52px;
@@ -20,16 +17,22 @@
 .title-me {
   color: var(--span-text-color);
 }
+
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
 .title-img {
   border-radius: 16px;
-  margin-bottom: 40px;
 }
 
 .bio {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-bottom: 40px;
 }
 
 .bio-title {
@@ -43,6 +46,7 @@
 }
 
 .text-bio {
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
@@ -74,12 +78,13 @@
   border-radius: 1px;
   height: 4px;
   width: 4px;
-  background-color: green;
+  background-color: var(--span-text-color);
   vertical-align: middle;
   margin-right: 18px;
 }
 
 .list-education-item {
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
@@ -108,12 +113,13 @@
   border-radius: 1px;
   height: 4px;
   width: 4px;
-  background-color: green;
+  background-color: var(--span-text-color);
   vertical-align: middle;
   margin-right: 14px;
 }
 
 .list-role-item {
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
@@ -126,26 +132,30 @@
 /* #region Styles for Tablet devices */
 
 @media only screen and (min-width: 768px) {
+  .about-me-container {
+    position: relative;
+  }
+
   .about-me {
     margin-bottom: 124px;
   }
 
   .about-me-content {
     display: flex;
+    flex-direction: row;
     gap: 32px;
+    margin-bottom: 60px;
   }
 
   .title-img {
     flex-basis: calc(50% - 15px);
     order: 1;
     margin-top: 368px;
-    margin-bottom: 60px;
   }
 
   .bio {
     flex-basis: calc(50% - 15px);
     order: 2;
-    position: relative;
   }
 
   .education-role-wrapper {
@@ -160,7 +170,6 @@
 
   .role {
     flex-basis: calc(50% - 15px);
-    position: relative;
   }
 
   .title-about {
@@ -181,7 +190,7 @@
 
   .green-dots {
     position: absolute;
-    top: 856px;
+    top: 756px;
     right: 32px;
     width: 336px;
     height: 252px;
@@ -209,4 +218,27 @@
   }
 }
 
+/* #endregion */
+
+/* #region Styles for Desktop devices */
+@media only screen and (min-width: 1280px) {
+  .about-me-content {
+    margin-left: 208px;
+    gap: 132px;
+  }
+
+  .title-img {
+    margin-top: 272px;
+  }
+
+  .education-role-wrapper {
+    gap: 136px;
+    margin-left: 208px;
+  }
+
+  .green-dots {
+    width: 384px;
+    height: 288px;
+  }
+}
 /* #endregion */
