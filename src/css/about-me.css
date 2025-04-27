@@ -36,6 +36,7 @@
 }
 
 .bio-title {
+  font-family: 'Poppins';
   font-weight: 500;
   font-size: 32px;
   line-height: 125%;
@@ -58,6 +59,7 @@
   margin-bottom: 40px;
 }
 .education-title {
+  font-family: 'Poppins';
   font-weight: 500;
   font-size: 32px;
   line-height: 125%;
@@ -95,6 +97,7 @@
 }
 
 .role-title {
+  font-family: 'Poppins';
   font-weight: 500;
   font-size: 32px;
   line-height: 125%;
