@@ -1,6 +1,9 @@
+.section-hero {
+  margin-bottom: 80px;
+}
+
 .hero-container {
   padding-top: 112px;
-  margin-bottom: 80px;
   background-repeat: no-repeat;
   background-position: center 16px;
   background-size: contain;
@@ -66,6 +69,7 @@
   border-radius: 16px;
   width: 165px;
   height: 92px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .wrapp-hero:hover .background-wrapp,
@@ -98,6 +102,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-item:hover,
@@ -106,10 +111,13 @@
 }
 
 @media only screen and (min-width: 768px) {
+.section-hero {
+  margin-bottom: 124px;
+}
+
   .hero-container {
     background-image: image-set(url(/img/decor/decor-hero-desktop.png));
     padding-top: 88px;
-    margin-bottom: 124px;
   }
 
   .title {
@@ -148,14 +156,13 @@
 @media only screen and (min-width: 1280px) {
   .section-hero {
     scroll-behavior: smooth;
-    
+    margin-bottom: 164px;
   }
 
   .hero-container {
     background-image: image-set(url(/img/decor/decor-hero-desktop.png));
     background-position: center 16px;
     padding-top: 184px;
-    margin-bottom: 164px;
   }
 
   .hero-img {
