@@ -25,26 +25,27 @@ form.addEventListener('submit', async function (e) {
   openModal();
   form.reset();
 } else {
-  iziToast.error({
-    title: 'Error',
+  iziToast.warning({
+    title: 'Warning',
     message: 'Check the data and try again',
     position: "topRight",
-    backgroundColor: "#d90429",
-    messageColor: "#fff",
+    backgroundColor: "#FFB81C",
+    messageColor: "#3B3D40",
     timeout: 5000,
     progressBar: false,
     close: true,
+    maxWidth: 400,
     transitionIn: 'fadeInDown',
     transitionOut: 'fadeOutUp',
   });
  }
 } catch (error) {
-  iziToast.error({
+  iziToast.warning({
     title: 'Network error',
     message: 'Try again.',
     position: "topRight",
-    backgroundColor: "#d90429",
-    messageColor: "#fff",
+    backgroundColor: "#FFB81C",
+    messageColor: "#3B3D40",
     timeout: 5000,
     progressBar: false,
     close: true,
