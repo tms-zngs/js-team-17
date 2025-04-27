@@ -32,22 +32,33 @@ const faqAccordion = new Accordion('.faq-list', {
     const closedItem = currentElement.closest('.faq-item');
     if (closedItem) {
       closedItem.classList.remove('ac-active');
+
+      const svgUse = closedItem.querySelector('.faq-btn-accordion use');
+      if (svgUse) {
+        svgUse.setAttribute('href', 'img/sprite.svg#icon-faq-down');
+      }
     }
   },
 });
-
 const faqTriggers = document.querySelectorAll('.faq-btn-accordion');
 
 faqTriggers.forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    const svgUse = btn.querySelector('use');
-    const parentItem = btn.closest('.faq-item');
-    const isOpen = parentItem.classList.contains('ac-active');
+  btn.addEventListener('click', function (event) {
+    event.preventDefault();
 
-    if (isOpen) {
-      svgUse.setAttribute('href', 'img/sprite.svg#icon-faq-down');
+    const faqItem = btn.closest('.faq-item');
+    const panelOfItem = faqItem.querySelector('.ac-panel');
+    const iconInButton = btn.querySelector('use');
+    const isAlreadyOpen = faqItem.classList.contains('ac-active');
+
+    if (!isAlreadyOpen) {
+      faqItem.classList.add('ac-active');
+      iconInButton.setAttribute('href', 'img/sprite.svg#icon-faq-up');
+      faqAccordion.open(panelOfItem);
     } else {
-      svgUse.setAttribute('href', 'img/sprite.svg#icon-faq-up');
+      faqItem.classList.remove('ac-active');
+      iconInButton.setAttribute('href', 'img/sprite.svg#icon-faq-down');
+      faqAccordion.close(panelOfItem);
     }
   });
 });
