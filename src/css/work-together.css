@@ -210,7 +210,7 @@ body.modal-open {
     }
 
     .work-together-container {
-        background-image: url('../img/decor/decor-form-tablet.png');
+        background-image: url('/img/decor/decor-form-tablet.png');
         background-repeat: no-repeat;
         background-size: auto;
         background-position: top right;
@@ -263,7 +263,7 @@ body.modal-open {
 @media only screen and (min-width: 1280px) {
 
     .work-together-container {
-        background-image: url('../img/decor/decor-form-desktop.png');
+        background-image: url('/img/decor/decor-form-desktop.png');
         background-repeat: no-repeat;
         background-size: auto;
         background-position: top right;
