@@ -28,6 +28,7 @@ body {
   margin: 0;
   color: var(--main-text-color);
   background-color: var(--main-background-color);
+  overflow-x: hidden;
 }
 
 body.dark-mode {
