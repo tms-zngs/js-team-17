@@ -107,8 +107,8 @@ color: var(--main-text-color);
 .benefits-container {
     background-repeat: no-repeat;
   background-position: center 16px;
-  background-size: contain;
-  background-image: image-set(url(/img/decor/decor-about-me-desktop.png));
+  background-size: auto;
+  background-image: image-set(url(/img/decor/decor-benefits-desktop.png));
 }
 .benefits-tittle {
     width: 681px;
