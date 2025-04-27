@@ -1,0 +1,191 @@
+.section-hero {
+  margin-bottom: 80px;
+}
+
+.hero-container {
+  padding-top: 112px;
+  background-repeat: no-repeat;
+  background-position: center 16px;
+  background-size: contain;
+  background-image: image-set(url(/img/decor/decor-hero-mobile.png));
+}
+
+.title {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 125%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-family: Impact, sans-serif;
+  margin-bottom: 40px;
+}
+
+.hero-img {
+  display: none;
+}
+
+.span-title,
+.green-text {
+  color: var(--span-text-color);
+}
+
+.wrapp-hero {
+  cursor: pointer;
+  position: relative;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+
+.wrapp-arrow {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-arrow {
+  margin-right: 12px;
+  fill: var(--span-text-color);
+}
+
+.hero-link {
+  cursor: pointer;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  z-index: 999;
+}
+
+.background-wrapp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--span-text-color);
+  border-radius: 16px;
+  width: 165px;
+  height: 92px;
+}
+
+.wrapp-hero:hover .background-wrapp,
+.wrapp-hero:focus .background-wrapp {
+  background-color: var(--hover-green);
+}
+
+.hero-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-family: Poppins, sans-serif;
+}
+
+.hero-list {
+  background-color: var(--grey-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  gap: 24px;
+  margin-top: 72px;
+}
+
+.hero-item {
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+}
+
+.hero-item:hover,
+.hero-item:focus {
+  color: var(--span-text-color);
+}
+
+@media only screen and (min-width: 768px) {
+.section-hero {
+  margin-bottom: 124px;
+}
+
+  .hero-container {
+    background-image: image-set(url(/img/decor/decor-hero-desktop.png));
+    padding-top: 88px;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 136px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-link {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 160%;
+  }
+
+  .background-wrapp {
+    left: 155px;
+    width: 261px;
+    height: 96px;
+  }
+
+  .hero-text {
+    font-size: 20px;
+    line-height: 160%;
+  }
+
+  .hero-list {
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .section-hero {
+    scroll-behavior: smooth;
+    margin-bottom: 164px;
+  }
+
+  .hero-container {
+    background-image: image-set(url(/img/decor/decor-hero-desktop.png));
+    background-position: center 16px;
+    padding-top: 184px;
+  }
+
+  .hero-img {
+    display: inline-block;
+    border-radius: 16px;
+    width: 108px;
+    height: 108px;
+  }
+
+  .wrapp-hero-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .wrapp-hero {
+    margin: 0;
+  }
+
+  .hero-text {
+    max-width: 592px;
+  }
+
+  .hero-list {
+    margin-top: 136px;
+  }
+}
