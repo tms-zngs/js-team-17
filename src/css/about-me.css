@@ -47,6 +47,7 @@
 
 .text-bio {
   font-family: 'Poppins';
+  min-height: 288px;
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
