@@ -36,6 +36,7 @@
 }
 
 .bio-title {
+  font-family: 'Poppins';
   font-weight: 500;
   font-size: 32px;
   line-height: 125%;
@@ -58,6 +59,7 @@
   margin-bottom: 40px;
 }
 .education-title {
+  font-family: 'Poppins';
   font-weight: 500;
   font-size: 32px;
   line-height: 125%;
@@ -95,6 +97,7 @@
 }
 
 .role-title {
+  font-family: 'Poppins';
   font-weight: 500;
   font-size: 32px;
   line-height: 125%;
@@ -139,11 +142,11 @@
   }
 
   .about-me-container {
-    background-image: url(../img/decor/decor-about-me-tablet.png);
+    background-image: url(/img/decor/decor-about-me-tablet.png);
     background-repeat: no-repeat;
     background-size: auto;
     background-position-x: 93%;
-    background-position-y: 81%;
+    background-position-y: 84%;
   }
 
   .about-me-content {
@@ -172,6 +175,7 @@
 
   .education {
     flex-basis: calc(50% - 15px);
+    margin-bottom: 0;
   }
 
   .role {
@@ -224,7 +228,7 @@
   }
 
   .about-me-container {
-    background-image: url(../img/decor/decor-about-me-desktop.png);
+    background-image: url(/img/decor/decor-about-me-desktop.png);
     background-position-x: 97%;
     background-position-y: 72%;
   }
