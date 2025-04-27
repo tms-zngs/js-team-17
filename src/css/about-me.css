@@ -1,0 +1,262 @@
+/* #region About-me mobile version */
+
+.about-me {
+  margin-bottom: 80px;
+}
+
+.title-about {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--main-text-color);
+  margin-bottom: 40px;
+}
+.title-me {
+  color: var(--span-text-color);
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.title-img {
+  border-radius: 16px;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bio-title {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  margin-bottom: 8px;
+}
+
+.text-bio {
+  font-family: 'Poppins';
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+.education {
+  margin-bottom: 40px;
+}
+.education-title {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  margin-bottom: 32px;
+}
+
+.list-education {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background-color: var(--span-text-color); /* зелений */
+  border-radius: 1px;
+  margin-right: 18px;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.list-education-item {
+  display: flex;
+  align-items: flex-start;
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+.role-title {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  margin-bottom: 32px;
+}
+.list-role {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list-role-item::before {
+  content: '';
+  display: inline-block;
+  border-radius: 1px;
+  height: 4px;
+  width: 4px;
+  background-color: var(--span-text-color);
+  vertical-align: middle;
+  margin-right: 14px;
+}
+
+.list-role-item {
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+/* #endregion */
+
+/* #region Styles for Tablet devices */
+
+@media only screen and (min-width: 768px) {
+  .about-me {
+    margin-bottom: 124px;
+  }
+
+  .about-me-container {
+    background-image: url(../img/decor/decor-about-me-tablet.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: 93%;
+    background-position-y: 84%;
+  }
+
+  .about-me-content {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+
+  .title-img {
+    flex-basis: calc(50% - 15px);
+    order: 1;
+    margin-top: 368px;
+  }
+
+  .bio {
+    flex-basis: calc(50% - 15px);
+    order: 2;
+  }
+
+  .education-role-wrapper {
+    display: flex;
+    gap: 32px;
+    flex-basis: 100%;
+  }
+
+  .education {
+    flex-basis: calc(50% - 15px);
+    margin-bottom: 0;
+  }
+
+  .role {
+    flex-basis: calc(50% - 15px);
+  }
+
+  .title-about {
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+    margin-bottom: 40px;
+  }
+
+  .bio-title {
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+  }
+
+  .education-title {
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+  }
+
+  .role {
+    height: 184px;
+  }
+
+  .role-title {
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+  }
+  .list-education,
+  .list-role {
+    gap: 16px;
+  }
+}
+
+/* #endregion */
+
+/* #region Styles for Desktop devices */
+@media only screen and (min-width: 1280px) {
+  .about-me {
+    margin-bottom: 164px;
+  }
+
+  .about-me-container {
+    background-image: url(../img/decor/decor-about-me-desktop.png);
+    background-position-x: 97%;
+    background-position-y: 72%;
+  }
+
+  .about-me-content {
+    margin-left: 208px;
+    gap: 132px;
+    margin-bottom: 80px;
+  }
+
+  .title-img {
+    margin-top: 272px;
+  }
+
+  .education-role-wrapper {
+    gap: 136px;
+    margin-left: 208px;
+  }
+
+  .education {
+    max-width: 384px;
+  }
+  .education-text {
+    max-width: 352px;
+  }
+  .role {
+    max-width: 384px;
+    height: 184px;
+  }
+}
+/* #endregion */
