@@ -47,7 +47,7 @@
 
 .text-bio {
   font-family: 'Poppins';
-  min-height: 288px;
+
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
@@ -73,18 +73,19 @@
   gap: 12px;
 }
 
-.list-education-item::before {
-  content: '';
-  display: inline-block;
-  border-radius: 1px;
-  height: 4px;
+.dot {
   width: 4px;
-  background-color: var(--span-text-color);
-  vertical-align: middle;
+  height: 4px;
+  background-color: var(--span-text-color); /* зелений */
+  border-radius: 1px;
   margin-right: 18px;
+  flex-shrink: 0;
+  margin-top: 8px;
 }
 
 .list-education-item {
+  display: flex;
+  align-items: flex-start;
   font-family: 'Poppins';
   font-weight: 300;
   font-size: 16px;
@@ -133,12 +134,16 @@
 /* #region Styles for Tablet devices */
 
 @media only screen and (min-width: 768px) {
-  .about-me-container {
-    position: relative;
-  }
-
   .about-me {
     margin-bottom: 124px;
+  }
+
+  .about-me-container {
+    background-image: url(../img/decor/decor-about-me-tablet.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: 93%;
+    background-position-y: 81%;
   }
 
   .about-me-content {
@@ -189,23 +194,14 @@
     color: var(--main-text-color);
   }
 
-  .green-dots {
-    position: absolute;
-    top: 756px;
-    right: 32px;
-    width: 336px;
-    height: 252px;
-    background-image: url(../img/decor/decor-about-me-tablet.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    z-index: -1;
-  }
-
   .education-title {
     font-size: 36px;
     line-height: 133%;
     letter-spacing: 0.01em;
+  }
+
+  .role {
+    height: 184px;
   }
 
   .role-title {
@@ -223,9 +219,20 @@
 
 /* #region Styles for Desktop devices */
 @media only screen and (min-width: 1280px) {
+  .about-me {
+    margin-bottom: 164px;
+  }
+
+  .about-me-container {
+    background-image: url(../img/decor/decor-about-me-desktop.png);
+    background-position-x: 97%;
+    background-position-y: 72%;
+  }
+
   .about-me-content {
     margin-left: 208px;
     gap: 132px;
+    margin-bottom: 80px;
   }
 
   .title-img {
@@ -237,9 +244,15 @@
     margin-left: 208px;
   }
 
-  .green-dots {
-    width: 384px;
-    height: 288px;
+  .education {
+    max-width: 384px;
+  }
+  .education-text {
+    max-width: 352px;
+  }
+  .role {
+    max-width: 384px;
+    height: 184px;
   }
 }
 /* #endregion */
