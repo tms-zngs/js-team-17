@@ -142,7 +142,7 @@
   }
 
   .about-me-container {
-    background-image: url(../img/decor/decor-about-me-tablet.png);
+    background-image: url(/img/decor/decor-about-me-tablet.png);
     background-repeat: no-repeat;
     background-size: auto;
     background-position-x: 93%;
@@ -228,7 +228,7 @@
   }
 
   .about-me-container {
-    background-image: url(../img/decor/decor-about-me-desktop.png);
+    background-image: url(/img/decor/decor-about-me-desktop.png);
     background-position-x: 97%;
     background-position-y: 72%;
   }
