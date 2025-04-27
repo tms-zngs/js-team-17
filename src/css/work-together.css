@@ -1,7 +1,12 @@
 .work-together {
     margin-bottom: 80px;
-
 }
+
+ .header-container {
+     display: flex;
+     justify-content: flex-start;
+     padding: 0;
+ }
 
 .work-together-header {
     font-weight: 400;
@@ -130,20 +135,21 @@
 @media (min-width: 768px) {
     .work-together {
         margin-bottom: 124px;
-        background-image: url('../img/decor/decor-form-tablet.png');
+        
+    }
+
+    .container {
+       background-image: url('../img/decor/decor-form-tablet.png');
         background-repeat: no-repeat;
-        background-position: top right;
         background-size: auto;
+        background-position: top -120px right 0px; 
     }
 
     .header-container {
-        display: flex;
-        justify-content: flex-start;
         max-width: 768px;
     }
 
     .work-together-header {
-        margin-top: 124px;
         margin-bottom: 60px;
         font-size: 108px;
         line-height: 1.14;
@@ -179,15 +185,14 @@
 
 @media (min-width: 1280px) {
 
-    .work-together {
-        background-image: url('../img/decor/decor-form-desktop.png');
+    .container {
+        background-image: url('../img/decor/decor-form-desktop.png');;
         background-repeat: no-repeat;
-        background-position: top right;
         background-size: auto;
+        background-position: top -116px right 0px;
     }
 
     .work-together-header {
-        margin-top: 164px;
         margin-bottom: 80px;
     }
 
