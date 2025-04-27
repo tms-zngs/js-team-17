@@ -10,14 +10,14 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-    --main-text-color: #292929; /* основной цвет текста */
-    --span-text-color: #00b068; /* цвет текста в span */
-    --main-background-color: #f0f0f0; /* основной фон для светлой темы */
-    --accent-background-color: #bcdfd1; /* дополнительный фон для светлой темы (в hero, hard-skills, заливка иконок benefits, faq)*/
-    --grey-background-color: #e4e5e6; /* серый фон (в hard skills, hero, кнопки my-projects, faq, reviews, форма) */
-    --hover-green: #009156; /* зеленый hover кнопки */
-    --hover-grey: #bbb; /* серый hover кнопки */
-    --error-color: #e74a3b; /* цвет текста ошибки */
+  --main-text-color: #292929; /* основной цвет текста */
+  --span-text-color: #00b068; /* цвет текста в span */
+  --main-background-color: #f0f0f0; /* основной фон для светлой темы */
+  --accent-background-color: #bcdfd1; /* дополнительный фон для светлой темы (в hero, hard-skills, заливка иконок benefits, faq)*/
+  --grey-background-color: #e4e5e6; /* серый фон (в hard skills, hero, кнопки my-projects, faq, reviews, форма) */
+  --hover-green: #009156; /* зеленый hover кнопки */
+  --hover-grey: #bbb; /* серый hover кнопки */
+  --error-color: #e74a3b; /* цвет текста ошибки */
 }
 
 body {
@@ -31,14 +31,14 @@ body {
 }
 
 body.dark-mode {
-    --main-text-color: #f0f0f0; /* основной цвет текста */
-    --span-text-color: #14c57c; /* цвет текста в span */
-    --main-background-color: #1e2023; /* основной фон для темной темы */
-    --accent-background-color: #204136; /* дополнительный фон для темной темы (в hero, hard-skills, заливка иконок benefits, faq)*/
-    --grey-background-color: #2a2d32; /* серый фон (в hard skills, hero, кнопки my-projects, faq, reviews, форма) */
-    --hover-green: #009156; /* зеленый hover кнопки */
-    --hover-grey: #3b3f45; /* серый hover кнопки */
-    --error-color: #e74a3b; /* цвет текста ошибки */
+  --main-text-color: #f0f0f0; /* основной цвет текста */
+  --span-text-color: #14c57c; /* цвет текста в span */
+  --main-background-color: #1e2023; /* основной фон для темной темы */
+  --accent-background-color: #204136; /* дополнительный фон для темной темы (в hero, hard-skills, заливка иконок benefits, faq)*/
+  --grey-background-color: #2a2d32; /* серый фон (в hard skills, hero, кнопки my-projects, faq, reviews, форма) */
+  --hover-green: #009156; /* зеленый hover кнопки */
+  --hover-grey: #3b3f45; /* серый hover кнопки */
+  --error-color: #e74a3b; /* цвет текста ошибки */
 }
 
 main {
