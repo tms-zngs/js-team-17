@@ -138,8 +138,8 @@
         
     }
 
-    .container {
-       background-image: url('../img/decor/decor-form-tablet.png');
+    .container.work-together-container {
+        background-image: url('../img/decor/decor-form-tablet.png');
         background-repeat: no-repeat;
         background-size: auto;
         background-position: top -120px right 0px; 
@@ -185,8 +185,8 @@
 
 @media (min-width: 1280px) {
 
-    .container {
-        background-image: url('../img/decor/decor-form-desktop.png');;
+    .container.work-together-container {
+        background-image: url('../img/decor/decor-form-desktop.png');
         background-repeat: no-repeat;
         background-size: auto;
         background-position: top -116px right 0px;
