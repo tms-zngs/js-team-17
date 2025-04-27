@@ -2,7 +2,7 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
 const faqAccordion = new Accordion('.faq-list', {
-  duration: 300,
+  duration: 150,
   showOne: true,
   openOnInit: [0],
   onOpen: function (currentElement) {
@@ -39,26 +39,4 @@ const faqAccordion = new Accordion('.faq-list', {
       }
     }
   },
-});
-const faqTriggers = document.querySelectorAll('.faq-btn-accordion');
-
-faqTriggers.forEach(function (btn) {
-  btn.addEventListener('click', function (event) {
-    event.preventDefault();
-
-    const faqItem = btn.closest('.faq-item');
-    const panelOfItem = faqItem.querySelector('.ac-panel');
-    const iconInButton = btn.querySelector('use');
-    const isAlreadyOpen = faqItem.classList.contains('ac-active');
-
-    if (!isAlreadyOpen) {
-      faqItem.classList.add('ac-active');
-      iconInButton.setAttribute('href', 'img/sprite.svg#icon-faq-up');
-      faqAccordion.open(panelOfItem);
-    } else {
-      faqItem.classList.remove('ac-active');
-      iconInButton.setAttribute('href', 'img/sprite.svg#icon-faq-down');
-      faqAccordion.close(panelOfItem);
-    }
-  });
 });
