@@ -1,5 +1,5 @@
-// import iziToast from "izitoast";
-// import "izitoast/dist/css/iziToast.min.css";
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 
 const form = document.getElementById('contact-form');
 const successModal = document.getElementById('success-modal');

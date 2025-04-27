@@ -157,14 +157,14 @@ input:checked + .slider {
   z-index: 999;
 }
 
-/* 
-.header-container {
+.mobile-menu{
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 20px;
   min-width: 320px;
   max-width: 360px;
-} */
+}
 
 .logo {
   color: var(--main-text-color);
@@ -214,4 +214,8 @@ input:checked + .slider {
   line-height: 150%;
   letter-spacing: .03em;
   font-family: Poppins, sans-serif;
+}
+
+.icon-close{
+  stroke: #292929;
 }
