@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function hideInitialProjects() {
     allProjects.forEach((project, index) => {
       if (index >= visibleProjectsCount) {
-        project.style.display = 'none';
+        project.classList.add('hidden-project');
       }
     });
   }
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 
     nextProjects.forEach((project, index) => {
-      project.style.display = 'block';
+      project.classList.remove('hidden-project');
       project.style.opacity = '0';
       project.style.transition = 'opacity 0.3s ease';
 
