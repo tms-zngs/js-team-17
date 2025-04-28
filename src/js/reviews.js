@@ -86,8 +86,6 @@ function handleLoad(entries, observer) {
       hasRendered = true;
       observer.unobserve(sectionReviews);
       createMarkup(reviewsData);
-      console.log(reviewsData);
-
       initSwiper();
     }
 
