@@ -144,7 +144,7 @@
   }
 
   .swiper {
-    min-height: 360px;
+    min-height: 288px;
   }
 
   .swiper-slide {
@@ -167,6 +167,10 @@
 /* #region ===== DESKTOP STYLES REVIEWS ===== */
 
 @media only screen and (min-width: 1280px) {
+  .swiper {
+    min-height: 296px;
+  }
+
   .section-reviews {
     padding-bottom: 164px;
   }
