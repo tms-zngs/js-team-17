@@ -1,14 +1,17 @@
 import { getResponse } from './get-api';
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import '../css/reviews.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const list = document.querySelector('.swiper-wrapper');
+const sectionReviews = document.querySelector('.section-reviews');
+
+let reviewsData = null;
+let hasRendered = false;
 
 const fragment = document.createDocumentFragment();
 
@@ -16,14 +19,14 @@ initReviewsSection();
 
 async function initReviewsSection() {
   try {
-    const data = await getResponse();
-    createMarkup(data);
-    initSwiper();
+    reviewsData = await getResponse();
+    observer.observe(sectionReviews);
   } catch (error) {
     iziToast.info({
-      title: 'Error',
+      title: 'Info',
       message: 'Reviews not found!',
       position: 'topRight',
+      backgroundColor: 'beige',
     });
     list.innerHTML = `
     <li class="swiper-slide">
@@ -37,6 +40,7 @@ async function initReviewsSection() {
     btnNext.disabled = true;
     btnPrev.style.opacity = 0.3;
     btnNext.style.opacity = 0.3;
+    document.querySelector('.swiper-slide').style.maxWidth = '100%';
   }
 }
 
@@ -60,7 +64,7 @@ function createMarkup(arr) {
 
 function initSwiper() {
   new Swiper('.swiper', {
-    modules: [Navigation],
+    modules: [Navigation, Keyboard],
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -75,5 +79,27 @@ function initSwiper() {
         spaceBetween: 32,
       },
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+  });
+}
+
+const options = {
+  root: null,
+  rootMargin: '1000px',
+  threshold: 0,
+};
+const observer = new IntersectionObserver(handleLoad, options);
+
+function handleLoad(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !hasRendered) {
+      hasRendered = true;
+      observer.unobserve(sectionReviews);
+      createMarkup(reviewsData);
+      initSwiper();
+    }
   });
 }
