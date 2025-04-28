@@ -112,22 +112,7 @@ body.dark-mode .faq-item.ac-active {
 
 @media screen and (min-width: 1280px) {
 
-  /* .faq::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 526px;
-      height: 408px;
-      background-image: url('../img/decor/decor-faq-desktop.png');
-      background-repeat: no-repeat;
-      background-position: bottom left;
-      background-size: contain;
-      z-index: -1;
-    } */
-
 .faq-container {
-  /* position: relative; */
   display: flex;
 
 }
@@ -139,20 +124,14 @@ body.dark-mode .faq-item.ac-active {
   left: 0;
   width: 526px;
   height: 408px;
-  background-image: url('../img/decor/decor-faq-desktop.png');
+  background-image: url('/img/decor/decor-faq-desktop.png');
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: contain;
   z-index: -1;
 }
 
-/* .faq-title-wrapper {
-  width: 520px;
-  margin-right: 104px;
-} */
-
 .faq-title {
-  /* flex-shrink: 0; */
   font-size: 108px;
   line-height: 124px;
   letter-spacing: 1.8px;
@@ -160,18 +139,8 @@ body.dark-mode .faq-item.ac-active {
   margin-bottom: 0;
 }
 
-/* .faq-list-wrapper {
-  position: relative;
-  padding-top: 276px;
-}  */
-
 .faq-list{
   position: relative;
   margin-top: 276px;
 }
-
-/* .faq-list{
-  position: relative;
-} */
-
 }
