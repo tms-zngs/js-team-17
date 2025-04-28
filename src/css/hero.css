@@ -6,7 +6,7 @@
   padding-top: 112px;
   background-repeat: no-repeat;
   background-position: center 16px;
-  background-size: contain;
+  background-size: auto;
   background-image: image-set(url(/img/decor/decor-hero-mobile.png));
 }
 
