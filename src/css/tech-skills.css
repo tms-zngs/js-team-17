@@ -1,9 +1,4 @@
-/* #region About-me mobile version */
-/* *,
-*::before,
-*::after {
-  box-sizing: border-box;
-} */
+/* #region tech-skills styles mobile version */
 
 .tech-skills {
   margin-bottom: 80px;
@@ -12,11 +7,12 @@
 .tech-skills-container {
   max-width: 1392px;
   overflow: hidden;
-  font-family: 'Pridi', sans-serif;
-  font-weight: 600;
-  font-size: 34px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  /* background-color: #ffdc00; */
 }
 
 .tech-skills-title {
@@ -41,15 +37,20 @@
   overflow: hidden;
 }
 
-.container__inner {
+.container-inner-first {
   display: flex;
+  align-items: center;
+  max-width: 1392px;
+  overflow: hidden;
+
+  color: var(--main-text-color);
 }
 
-.container__line {
+.container-line-first {
   flex-shrink: 0;
   margin: 0;
-  padding: 10px 15px;
-  /* min-width: 100%; */
+  padding: 32px 0;
+  min-width: 100%;
   white-space: nowrap;
   animation-name: marqueeLine;
   animation-duration: 5s;
@@ -58,18 +59,46 @@
   background-color: #bcdfd1;
 }
 
-.container__line-second {
+.dot-tech-skills-first {
+  display: inline-block;
+  background-color: var(--span-text-color);
+  border-radius: 2px;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  margin: 8px 24px;
+}
+
+.container-inner-second {
+  display: flex;
+  max-width: 1392px;
+  overflow: hidden;
+  color: var(--span-text-color);
+}
+
+.container-line-second {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 32px 0px;
+  min-width: 100%;
+  white-space: nowrap;
+  animation-name: marqueeLineSecond;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
   background-color: #e4e5e6;
 }
 
-.dot-tech-skills {
-  width: 24px;
-  height: 24px;
-  background-color: var(--span-text-color);
-  border-radius: 1px;
-  margin-right: 18px;
+.dot-tech-skills-second {
+  display: inline-block;
+
+  background-color: var(--main-text-color);
+  border-radius: 2px;
+  width: 8px;
+  height: 8px;
+
   flex-shrink: 0;
-  margin-top: 8px;
+  margin: 8px 24px;
 }
 
 @keyframes marqueeLine {
@@ -82,4 +111,51 @@
   }
 }
 
+@keyframes marqueeLineSecond {
+  from {
+    transform: translateX(0) rotate(+2deg);
+  }
+
+  to {
+    transform: translateX(-100%) rotate(+2deg);
+  }
+}
+
+/* #endregion */
+
+/* #region tech-skills styles for Tablet devices */
+
+@media only screen and (min-width: 768px) {
+  .tech-skills {
+    margin-bottom: 124px;
+  }
+
+  .tech-skills-container {
+    max-width: 1392px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+  }
+
+  .dot-tech-skills-first,
+  .dot-tech-skills-second {
+    margin: 8px 20px;
+  }
+
+  .container-line-first,
+  .container-line-second {
+    padding: 40px 0px;
+  }
+}
+
+/* #endregion */
+
+/* #region tech-skills styles for Desktop devices */
+@media only screen and (min-width: 1280px) {
+  .tech-skills {
+    margin-bottom: 164px;
+  }
+}
 /* #endregion */
