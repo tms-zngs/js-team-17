@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import '../css/reviews.css';
+import '/css/reviews.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
