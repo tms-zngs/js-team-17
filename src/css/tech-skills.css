@@ -10,12 +10,35 @@
 }
 
 .tech-skills-container {
+  max-width: 1392px;
   overflow: hidden;
   font-family: 'Pridi', sans-serif;
   font-weight: 600;
   font-size: 34px;
   text-transform: uppercase;
-  background-color: #ffdc00;
+  /* background-color: #ffdc00; */
+}
+
+.tech-skills-title {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container__inner {
@@ -26,12 +49,27 @@
   flex-shrink: 0;
   margin: 0;
   padding: 10px 15px;
-  min-width: 100%;
+  /* min-width: 100%; */
   white-space: nowrap;
   animation-name: marqueeLine;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  background-color: #bcdfd1;
+}
+
+.container__line-second {
+  background-color: #e4e5e6;
+}
+
+.dot-tech-skills {
+  width: 24px;
+  height: 24px;
+  background-color: var(--span-text-color);
+  border-radius: 1px;
+  margin-right: 18px;
+  flex-shrink: 0;
+  margin-top: 8px;
 }
 
 @keyframes marqueeLine {
