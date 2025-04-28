@@ -12,6 +12,8 @@ const sectionReviews = document.querySelector('.section-reviews');
 
 let reviewsData = null;
 let hasRendered = false;
+let hasError = false;
+let errorNotified = false;
 
 const fragment = document.createDocumentFragment();
 
@@ -20,27 +22,10 @@ initReviewsSection();
 async function initReviewsSection() {
   try {
     reviewsData = await getResponse();
-    observer.observe(sectionReviews);
   } catch (error) {
-    iziToast.info({
-      title: 'Info',
-      message: 'Reviews not found!',
-      position: 'topRight',
-      backgroundColor: 'beige',
-    });
-    list.innerHTML = `
-    <li class="swiper-slide">
-    <h3 class="title-error">
-      Oops! Looks like the reviews didn’t load. We’re working on it — please check back shortly!
-    </h3>
-    </li>`;
-    const btnPrev = document.querySelector('.swiper-button-prev');
-    const btnNext = document.querySelector('.swiper-button-next');
-    btnPrev.disabled = true;
-    btnNext.disabled = true;
-    btnPrev.style.opacity = 0.3;
-    btnNext.style.opacity = 0.3;
-    document.querySelector('.swiper-slide').style.maxWidth = '100%';
+    hasError = true;
+  } finally {
+    observer.observe(sectionReviews);
   }
 }
 
@@ -95,11 +80,41 @@ const observer = new IntersectionObserver(handleLoad, options);
 
 function handleLoad(entries, observer) {
   entries.forEach(entry => {
-    if (entry.isIntersecting && !hasRendered) {
+    if (!entry.isIntersecting) return;
+
+    if (reviewsData && !hasRendered) {
       hasRendered = true;
       observer.unobserve(sectionReviews);
       createMarkup(reviewsData);
       initSwiper();
     }
+
+    if (hasError && !errorNotified) {
+      errorNotified = true;
+      observer.unobserve(sectionReviews);
+      handleError();
+    }
   });
+}
+
+function handleError() {
+  iziToast.info({
+    title: 'Info',
+    message: 'Reviews not found!',
+    position: 'topRight',
+    backgroundColor: 'beige',
+  });
+  list.innerHTML = `
+    <li class="swiper-slide">
+    <h3 class="title-error">
+      Oops! Looks like the reviews didn’t load. We’re working on it — please check back shortly!
+    </h3>
+    </li>`;
+  const btnPrev = document.querySelector('.swiper-button-prev');
+  const btnNext = document.querySelector('.swiper-button-next');
+  btnPrev.disabled = true;
+  btnNext.disabled = true;
+  btnPrev.style.opacity = 0.3;
+  btnNext.style.opacity = 0.3;
+  document.querySelector('.swiper-slide').style.maxWidth = '100%';
 }
