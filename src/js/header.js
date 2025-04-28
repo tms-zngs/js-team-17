@@ -2,7 +2,7 @@ const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
 
 if (localStorage.getItem("theme") === "dark") {
-    body.clasgitsList.add("dark-mode");
+    body.classList.add("dark-mode");
     themeToggle.checked = true;
 }
 

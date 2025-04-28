@@ -154,6 +154,10 @@ input:checked + .slider {
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   background-color: var(--main-background-color);
+  background-repeat: no-repeat;
+  background-position: center 80px;
+  background-size: auto;
+  background-image: image-set(url(/img/decor/decor-hero-mobile.png));
   z-index: 999;
 }
 
@@ -166,28 +170,12 @@ input:checked + .slider {
   max-width: 360px;
 }
 
-.logo {
-  color: var(--main-text-color);
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 100%;
-  letter-spacing: 0.06em;
-  font-family: Impact, Arial, sans-serif;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-}
-
 .logo-header-span {
   color: var(--span-text-color);
 }
 
 .modal-btn {
   z-index: 100;
-}
-
-.icon-close {
-  fill: black;
 }
 
 .burger-btn {
@@ -216,6 +204,15 @@ input:checked + .slider {
   font-family: Poppins, sans-serif;
 }
 
+.nav-item a {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+  color: var(--span-text-color);
+}
+
 .icon-close{
-  stroke: #292929;
+  stroke: var(--main-text-color);
 }
