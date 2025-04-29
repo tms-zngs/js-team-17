@@ -4,7 +4,7 @@
 }
 
 .tech-skills-container {
-  max-width: 1392px;
+  width: 100%;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 32px;
@@ -38,7 +38,7 @@
 
 .container-inner {
   overflow: hidden;
-  max-width: 1392px;
+  width: 100%;
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -49,17 +49,15 @@
   width: fit-content;
 }
 
-.marquee-track.first {
-  animation: scrollLine 20s linear infinite;
+.marquee-track.first,
+.marquee-track.second {
+animation: scrollLine 30s linear infinite;
 }
 
 .marquee-wrapper.second-wrapper {
   overflow: hidden;
-  transform: rotate(2deg);
-}
-
-.marquee-track.second {
-  animation: scrollLine 20s linear infinite;
+  transform: rotate(2deg) translateX(-10px);
+  padding: 6px 0;
 }
 
 .marquee-line {
@@ -87,14 +85,15 @@
 }
 
 .marquee-track.first .marquee-line {
-  background-color: #bcdfd1;
+  background-color: var(--accent-background-color);
   color: var(--main-text-color);
 }
 
 .marquee-track.second .marquee-line {
-  background-color: #e4e5e6;
+  background-color: var(--grey-background-color);
   color: var(--span-text-color);
 }
+
 
 @keyframes scrollLine {
   0% {
@@ -105,9 +104,6 @@
   }
 }
 
-/* #endregion */
-
-/* #rigion tech-skills table version  */
 
 @media only screen and (min-width: 768px) {
   .tech-skills {
@@ -117,6 +113,9 @@
     font-size: 36px;
     line-height: 133%;
     letter-spacing: 0.01em;
+  }
+  .marquee-wrapper.second-wrapper {
+    padding: 13px 0;
   }
   .dot-tech-skills-first,
   .dot-tech-skills-second {
@@ -133,6 +132,9 @@
 @media only screen and (min-width: 1280px) {
   .tech-skills {
     margin-bottom: 164px;
+  }
+    .marquee-wrapper.second-wrapper {
+    padding: 24px 0;
   }
 }
 /* #endregion */
