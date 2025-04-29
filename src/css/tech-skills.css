@@ -56,7 +56,6 @@
 .marquee-wrapper.second-wrapper {
   overflow: hidden;
   transform: rotate(2deg);
-  /* transform-origin: bottom left; */
 }
 
 .marquee-track.second {
