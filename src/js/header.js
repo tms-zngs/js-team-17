@@ -1,5 +1,4 @@
 const themeToggle = document.getElementById('theme-toggle');
-const spanSlider = document.querySelector('.slider');
 const body = document.body;
 
 if (localStorage.getItem('theme') === 'dark') {
