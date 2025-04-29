@@ -1,4 +1,3 @@
-
 .faq {
   position: relative;
   max-width: 1280px;
@@ -6,7 +5,6 @@
   min-height: 100vh;
   margin-bottom: 164px;
 }
-
 
 .faq-title-accent-wrapper {
   color: var(--span-text-color);
@@ -18,14 +16,15 @@
   line-height: 64px;
   letter-spacing: 1.8px;
   margin-bottom: 40px;
-  }
+}
 
 .faq-item {
   background-color: var(--main-background-color) !important;
   border: none !important;
   border-bottom: 1px solid var(--grey-background-color) !important;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+  cursor: pointer;
+}
 
 .faq-item.ac-active {
   border-bottom: none !important;
@@ -47,7 +46,7 @@ body.dark-mode .faq-item.ac-active {
   padding-right: 24px;
   padding-left: 24px;
   margin-bottom: 24px;
-  }
+}
 
 .faq-question-title {
   font-family: 'Poppins', sans-serif;
@@ -57,7 +56,7 @@ body.dark-mode .faq-item.ac-active {
   letter-spacing: 0.5px;
   margin-right: 16px;
   text-transform: uppercase;
-  }
+}
 
 .faq-btn-accordion {
   max-width: 24px !important;
@@ -73,18 +72,18 @@ body.dark-mode .faq-item.ac-active {
   height: 12px;
   fill: none;
   stroke: var(--main-text-color);
-  }
+}
 
 .ac .ac-trigger::after {
   display: none !important;
   content: none !important;
-  }
+}
 
 .faq-answer {
   padding-right: 24px;
   padding-bottom: 28px;
   padding-left: 24px;
-  }
+}
 
 .faq-answer-item {
   font-family: 'Poppins', sans-serif;
@@ -92,58 +91,53 @@ body.dark-mode .faq-item.ac-active {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.5px;
-  }
+}
 
 @media screen and (min-width: 768px) {
-
-.faq-title {
-  font-size: 108px;
-  line-height: 124px;
-  margin-bottom: 60px;
+  .faq-title {
+    font-size: 108px;
+    line-height: 124px;
+    margin-bottom: 60px;
   }
 
-.faq-question {
-  justify-content: space-between;
-}
-.faq-question-title {
-  font-size: 20px;
-  line-height: 32px;
-}
-
-
+  .faq-question {
+    justify-content: space-between;
+  }
+  .faq-question-title {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
+  .faq-container {
+    display: flex;
+  }
 
-.faq-container {
-  display: flex;
+  .faq-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 526px;
+    height: 408px;
+    background-image: url('/img/decor/decor-faq-desktop.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+    z-index: -1;
+  }
 
-}
+  .faq-title {
+    font-size: 108px;
+    line-height: 124px;
+    letter-spacing: 1.8px;
+    margin-right: 104px;
+    margin-bottom: 0;
+  }
 
-.faq-container::before{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 526px;
-  height: 408px;
-  background-image: url('/img/decor/decor-faq-desktop.png');
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: contain;
-  z-index: -1;
-}
-
-.faq-title {
-  font-size: 108px;
-  line-height: 124px;
-  letter-spacing: 1.8px;
-  margin-right: 104px;
-  margin-bottom: 0;
-}
-
-.faq-list{
-  position: relative;
-  margin-top: 276px;
-}
+  .faq-list {
+    position: relative;
+    margin-top: 276px;
+  }
 }
