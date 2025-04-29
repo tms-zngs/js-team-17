@@ -5,13 +5,13 @@
 
 .tech-skills-container {
   max-width: 1392px;
-  overflow: hidden;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 125%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  overflow: hidden;
 }
 
 .tech-skills-title {
@@ -36,79 +36,83 @@
   overflow: hidden;
 }
 
-/* First line */
-.container-inner-first {
+.container-inner {
+  overflow: hidden;
+  max-width: 1392px;
+  white-space: nowrap;
   display: flex;
   align-items: center;
-  max-width: 1392px;
-  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: fit-content;
+}
+
+.marquee-track.first {
+  animation: scrollLine 20s linear infinite;
+}
+
+.marquee-track.second {
+  animation: scrollLineRotate 20s linear infinite;
+}
+
+.marquee-line {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  white-space: nowrap;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 24px;
+  transform: translateY(1px);
+}
+
+.dot-first {
+  background-color: var(--span-text-color);
+}
+
+.dot-second {
+  background-color: var(--main-text-color);
+}
+
+.marquee-track.first .marquee-line {
+  background-color: #bcdfd1;
   color: var(--main-text-color);
 }
 
-.container-line-first {
-  flex-shrink: 0;
-  margin: 0;
-  padding: 32px 0;
-  min-width: 100%;
-  white-space: nowrap;
-  background-color: #bcdfd1;
-  animation: marqueeLine 10s linear infinite;
-}
-
-.dot-tech-skills-first {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin: 0 24px;
-  background-color: var(--span-text-color);
-  border-radius: 2px;
-  vertical-align: middle;
-  flex-shrink: 0;
-}
-
-/* Second line */
-.container-inner-second {
-  display: flex;
-  align-items: center;
-  max-width: 1392px;
-  overflow: hidden;
-  color: var(--span-text-color);
-  transform: rotate(2deg);
-}
-
-.container-line-second {
-  flex-shrink: 0;
-  margin: 0;
-  padding: 32px 0;
-  min-width: 100%;
-  white-space: nowrap;
+.marquee-track.second .marquee-line {
   background-color: #e4e5e6;
-  animation: marqueeLine 10s linear infinite;
+  color: var(--span-text-color);
 }
 
-.dot-tech-skills-second {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin: 0 24px;
-  background-color: var(--main-text-color);
-  border-radius: 2px;
-  vertical-align: middle;
-  flex-shrink: 0;
-}
-
-@keyframes marqueeLine {
+@keyframes scrollLine {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
   }
 }
+
+@keyframes scrollLineRotate {
+  0% {
+    transform: translateX(0%) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(2deg);
+  }
+}
+
 /* #endregion */
 
 /* #rigion tech-skills table version  */
-/* Адаптив */
+
 @media only screen and (min-width: 768px) {
   .tech-skills {
     margin-bottom: 124px;
