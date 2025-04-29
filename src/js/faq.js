@@ -6,34 +6,32 @@ const faqAccordion = new Accordion('.faq-list', {
   duration: 150,
   showOne: true,
   openOnInit: [0],
+  triggerClass: 'faq-question',
+  elementClass: 'faq-item',
+  panelClass: 'faq-answer',
   onOpen: function (currentElement) {
-    const allItems = document.querySelectorAll('.faq-item');
+    const openedItem = currentElement.closest('.faq-item');
+    if (!openedItem) return;
 
+    const allItems = document.querySelectorAll('.faq-item');
     allItems.forEach(function (item) {
       item.classList.remove('ac-active');
-
       const svgUse = item.querySelector('.faq-btn-accordion use');
       if (svgUse) {
         svgUse.setAttribute('href', `${spriteUrl}#icon-faq-down`);
       }
     });
 
-    const openedItem = currentElement.closest('.faq-item');
-
-    if (openedItem) {
-      openedItem.classList.add('ac-active');
-
-      const svgUse = openedItem.querySelector('.faq-btn-accordion use');
-      if (svgUse) {
-        svgUse.setAttribute('href', `${spriteUrl}#icon-faq-up`);
-      }
+    openedItem.classList.add('ac-active');
+    const svgUseActive = openedItem.querySelector('.faq-btn-accordion use');
+    if (svgUseActive) {
+      svgUseActive.setAttribute('href', `${spriteUrl}#icon-faq-up`);
     }
   },
   onClose: function (currentElement) {
     const closedItem = currentElement.closest('.faq-item');
     if (closedItem) {
       closedItem.classList.remove('ac-active');
-
       const svgUse = closedItem.querySelector('.faq-btn-accordion use');
       if (svgUse) {
         svgUse.setAttribute('href', `${spriteUrl}#icon-faq-down`);
@@ -45,7 +43,9 @@ const faqAccordion = new Accordion('.faq-list', {
 const allItems = document.querySelectorAll('.faq-item');
 allItems.forEach(function (item) {
   const svgUse = item.querySelector('.faq-btn-accordion use');
-  if (svgUse) {
+  if (svgUse && !item.classList.contains('ac-active')) {
     svgUse.setAttribute('href', `${spriteUrl}#icon-faq-down`);
+  } else if (svgUse && item.classList.contains('ac-active')) {
+    svgUse.setAttribute('href', `${spriteUrl}#icon-faq-up`);
   }
 });
