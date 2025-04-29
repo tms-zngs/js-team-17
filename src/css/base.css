@@ -20,6 +20,10 @@
   --error-color: #e74a3b; /* цвет текста ошибки */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
