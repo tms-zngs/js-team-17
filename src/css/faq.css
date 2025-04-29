@@ -64,7 +64,9 @@ body.dark-mode .faq-item.ac-active {
   max-height: 24px;
   padding: 4px !important;
   background-color: transparent;
-  }
+  border: none;
+  outline: none;
+}
 
 .faq-btn-svg {
   width: 16px;
