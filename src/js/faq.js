@@ -2,19 +2,14 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 import spriteUrl from '/img/sprite.svg?url';
 
+// Ініціалізація акордеону з правильною кнопкою-тригером
 const faqAccordion = new Accordion('.faq-list', {
   duration: 150,
   showOne: true,
   openOnInit: [0],
-  triggerClass: 'faq-question',
-  elementClass: 'faq-item',
-  panelClass: 'faq-answer',
-  onOpen: function (currentElement) {
-    const openedItem = currentElement.closest('.faq-item');
-    if (!openedItem) return;
-
-    const allItems = document.querySelectorAll('.faq-item');
-    allItems.forEach(function (item) {
+  triggerClass: 'faq-btn-accordion', // вказуємо реальний клас кнопки
+  onOpen(currentElement) {
+    document.querySelectorAll('.faq-item').forEach(item => {
       item.classList.remove('ac-active');
       const svgUse = item.querySelector('.faq-btn-accordion use');
       if (svgUse) {
@@ -22,13 +17,16 @@ const faqAccordion = new Accordion('.faq-list', {
       }
     });
 
-    openedItem.classList.add('ac-active');
-    const svgUseActive = openedItem.querySelector('.faq-btn-accordion use');
-    if (svgUseActive) {
-      svgUseActive.setAttribute('href', `${spriteUrl}#icon-faq-up`);
+    const openedItem = currentElement.closest('.faq-item');
+    if (openedItem) {
+      openedItem.classList.add('ac-active');
+      const svgUse = openedItem.querySelector('.faq-btn-accordion use');
+      if (svgUse) {
+        svgUse.setAttribute('href', `${spriteUrl}#icon-faq-up`);
+      }
     }
   },
-  onClose: function (currentElement) {
+  onClose(currentElement) {
     const closedItem = currentElement.closest('.faq-item');
     if (closedItem) {
       closedItem.classList.remove('ac-active');
@@ -40,12 +38,29 @@ const faqAccordion = new Accordion('.faq-list', {
   },
 });
 
-const allItems = document.querySelectorAll('.faq-item');
-allItems.forEach(function (item) {
+// Фікс SVG: після ініціалізації лишаємо перший відкритим
+document.querySelectorAll('.faq-item').forEach((item, index) => {
   const svgUse = item.querySelector('.faq-btn-accordion use');
-  if (svgUse && !item.classList.contains('ac-active')) {
-    svgUse.setAttribute('href', `${spriteUrl}#icon-faq-down`);
-  } else if (svgUse && item.classList.contains('ac-active')) {
-    svgUse.setAttribute('href', `${spriteUrl}#icon-faq-up`);
+  if (svgUse) {
+    if (index === 0) {
+      item.classList.add('ac-active');
+      svgUse.setAttribute('href', `${spriteUrl}#icon-faq-up`);
+    } else {
+      svgUse.setAttribute('href', `${spriteUrl}#icon-faq-down`);
+    }
   }
+});
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(function (item) {
+  item.addEventListener('click', function (event) {
+    event.preventDefault;
+    if (!event.target.closest('.faq-btn-accordion')) {
+      const trigger = item.querySelector('.faq-btn-accordion');
+      if (trigger) {
+        trigger.click();
+      }
+    }
+  });
 });
