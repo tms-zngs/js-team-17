@@ -1,140 +1,147 @@
-/* #rigion tech-skills mobile version */
-.tech-skills {
+.tech-skills-section {
+  overflow: hidden;
   margin-bottom: 80px;
 }
 
-.tech-skills-container {
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 125%;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  overflow: hidden;
-}
-
-.tech-skills-title {
-  font-weight: 400;
-  font-size: 52px;
-  line-height: 123%;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--main-text-color);
-}
-
 .visually-hidden {
-  position: absolute;
   width: 1px;
   height: 1px;
-  margin: -1px;
-  border: 0;
   padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  border: 0;
 }
 
-.container-inner {
-  overflow: hidden;
-  width: 100%;
+.marquee {
   white-space: nowrap;
+  z-index: 2;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.up {
+  background-color: var(--accent-background-color);
+  padding: 32px 0;
+}
+
+.down {
+  background-color: var(--grey-background-color);
+  transform: skewY(2deg);
+  transform-origin: top left;
+  z-index: 1;
+  margin-top: 0px;
+  padding: 32px 0;
+  height: auto;
+  margin-bottom: 52px;
+}
+
+.marquee-inner {
   display: flex;
-  align-items: center;
+
 }
 
-.marquee-track {
-  display: flex;
-  width: fit-content;
-}
-
-.marquee-track.first,
-.marquee-track.second {
-animation: scrollLine 30s linear infinite;
-}
-
-.marquee-wrapper.second-wrapper {
-  overflow: hidden;
-  transform: rotate(2deg) translateX(-10px);
-  padding: 6px 0;
+.marquee-inner {
+  animation-direction: reverse;
 }
 
 .marquee-line {
-  display: flex;
-  align-items: center;
-  padding: 32px 0;
+  flex-shrink: 0;
+  margin: 0;
+  min-width: 100%;
   white-space: nowrap;
 }
 
-.dot {
+.marquee-line-up {
+  margin: auto;
+  color: var(--main-text-color);
+  animation: marqueeLine 15s linear infinite;
+}
+
+.marquee-line-down {
+  margin: auto;
+  color: var(--span-text-color);
+  animation: marqueeLineReverse 15s linear infinite;
+}
+
+.dot-up {
   display: inline-block;
   width: 8px;
   height: 8px;
-  border-radius: 2px;
-  margin: 0 24px;
-  transform: translateY(1px);
-}
-
-.dot-first {
   background-color: var(--span-text-color);
+  margin: 10px 16px;
+  border-radius: 2px;
 }
 
-.dot-second {
+.dot-down {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
   background-color: var(--main-text-color);
+  margin: 10px 16px;
+  border-radius: 2px;
 }
 
-.marquee-track.first .marquee-line {
-  background-color: var(--accent-background-color);
-  color: var(--main-text-color);
-}
-
-.marquee-track.second .marquee-line {
-  background-color: var(--grey-background-color);
-  color: var(--span-text-color);
-}
-
-
-@keyframes scrollLine {
-  0% {
-    transform: translateX(0%);
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translateX(-50%);
+
+  to {
+    transform: translateX(-100%);
   }
 }
 
 
-@media only screen and (min-width: 768px) {
-  .tech-skills {
-    margin-bottom: 124px;
+@keyframes marqueeLineReverse {
+  from {
+    transform: translateX(-100%);
   }
-  .tech-skills-container {
-    font-size: 36px;
-    line-height: 133%;
-    letter-spacing: 0.01em;
+
+  to {
+    transform: translateX(0);
   }
-  .marquee-wrapper.second-wrapper {
-    padding: 13px 0;
-  }
-  .dot-tech-skills-first,
-  .dot-tech-skills-second {
-    margin: 0 20px;
-  }
-  .container-line-first,
-  .container-line-second {
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+  .tech-skills-section {
+  margin-bottom: 124px;
+}
+
+.marquee {
+font-size: 36px;
+line-height: 1.33;
+letter-spacing: 0.01em;
+}
+
+.up {
+  padding: 40px 0;
+}
+
+  .down {
+    margin-top: -10px;
     padding: 40px 0;
   }
-}
-/* #endregion */
 
-/* #rigion tech-skills desctop version  */
-@media only screen and (min-width: 1280px) {
-  .tech-skills {
-    margin-bottom: 164px;
-  }
-    .marquee-wrapper.second-wrapper {
-    padding: 26px 0;
-  }
 }
-/* #endregion */
+
+@media screen and (min-width: 1280px) {
+
+  .tech-skills-section {
+  margin-bottom: 164px;
+}
+
+  .down {
+    transform: skewY(1deg);
+  }
+
+}
