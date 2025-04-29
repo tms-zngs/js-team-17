@@ -53,8 +53,13 @@
   animation: scrollLine 20s linear infinite;
 }
 
+.marquee-wrapper.second-wrapper {
+  overflow: hidden;
+  transform: rotate(2deg);
+}
+
 .marquee-track.second {
-  animation: scrollLineRotate 20s linear infinite;
+  animation: scrollLine 20s linear infinite;
 }
 
 .marquee-line {
@@ -97,15 +102,6 @@
   }
   100% {
     transform: translateX(-50%);
-  }
-}
-
-@keyframes scrollLineRotate {
-  0% {
-    transform: translateX(0%) rotate(2deg);
-  }
-  100% {
-    transform: translateX(-50%) rotate(2deg);
   }
 }
 
