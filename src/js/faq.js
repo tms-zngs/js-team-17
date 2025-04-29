@@ -1,6 +1,6 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-import spriteUrl from '../img/sprite.svg?url';
+import spriteUrl from '/img/sprite.svg?url';
 
 const faqAccordion = new Accordion('.faq-list', {
   duration: 150,
