@@ -76,7 +76,6 @@ input:checked + .slider {
   border-radius: 50%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  /* background: #00b068; */
   background-repeat: no-repeat;
   background-position: center;
 }
