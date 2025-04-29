@@ -13,7 +13,7 @@ const faqAccordion = new Accordion('.faq-list', {
 
       const svgUse = item.querySelector('.faq-btn-accordion use');
       if (svgUse) {
-        svgUse.setAttribute('href', 'img/sprite.svg#icon-faq-down');
+        svgUse.setAttribute('href', '/img/sprite.svg#icon-faq-down');
       }
     });
 
@@ -24,7 +24,7 @@ const faqAccordion = new Accordion('.faq-list', {
 
       const svgUse = openedItem.querySelector('.faq-btn-accordion use');
       if (svgUse) {
-        svgUse.setAttribute('href', 'img/sprite.svg#icon-faq-up');
+        svgUse.setAttribute('href', '/img/sprite.svg#icon-faq-up');
       }
     }
   },
@@ -35,7 +35,7 @@ const faqAccordion = new Accordion('.faq-list', {
 
       const svgUse = closedItem.querySelector('.faq-btn-accordion use');
       if (svgUse) {
-        svgUse.setAttribute('href', 'img/sprite.svg#icon-faq-down');
+        svgUse.setAttribute('href', '/img/sprite.svg#icon-faq-down');
       }
     }
   },
