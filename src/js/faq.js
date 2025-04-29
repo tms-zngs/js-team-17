@@ -53,7 +53,7 @@
 
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-import spriteUrl from '../img/sprite.svg?url';
+import spriteUrl from '/img/sprite.svg?url';
 
 // Ініціалізація акордеону з правильною кнопкою-тригером
 const faqAccordion = new Accordion('.faq-list', {
