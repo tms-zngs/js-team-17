@@ -51,3 +51,11 @@ document.addEventListener('keydown', event => {
     closeModal();
   }
 });
+
+const modalLinks = document.querySelectorAll('.modal-link');
+
+modalLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    closeModal();
+  });
+});
