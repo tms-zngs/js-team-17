@@ -51,6 +51,7 @@
 
 .marquee-track.first {
   animation: scrollLine 20s linear infinite;
+  color: var(--main-text-color);
 }
 
 .marquee-wrapper.second-wrapper {
@@ -60,6 +61,7 @@
 
 .marquee-track.second {
   animation: scrollLine 20s linear infinite;
+  color: var(--span-text-color);
 }
 
 .marquee-line {
