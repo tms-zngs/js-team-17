@@ -1,5 +1,6 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+import spriteUrl from '/img/sprite.svg?url';
 
 const faqAccordion = new Accordion('.faq-list', {
   duration: 150,
@@ -13,7 +14,7 @@ const faqAccordion = new Accordion('.faq-list', {
 
       const svgUse = item.querySelector('.faq-btn-accordion use');
       if (svgUse) {
-        svgUse.setAttribute('href', '/img/sprite.svg#icon-faq-down');
+        svgUse.setAttribute('href', `${spriteUrl}#icon-faq-down`);
       }
     });
 
@@ -24,7 +25,7 @@ const faqAccordion = new Accordion('.faq-list', {
 
       const svgUse = openedItem.querySelector('.faq-btn-accordion use');
       if (svgUse) {
-        svgUse.setAttribute('href', '/img/sprite.svg#icon-faq-up');
+        svgUse.setAttribute('href', `${spriteUrl}#icon-faq-up`);
       }
     }
   },
@@ -35,8 +36,16 @@ const faqAccordion = new Accordion('.faq-list', {
 
       const svgUse = closedItem.querySelector('.faq-btn-accordion use');
       if (svgUse) {
-        svgUse.setAttribute('href', '/img/sprite.svg#icon-faq-down');
+        svgUse.setAttribute('href', `${spriteUrl}#icon-faq-down`);
       }
     }
   },
+});
+
+const allItems = document.querySelectorAll('.faq-item');
+allItems.forEach(function (item) {
+  const svgUse = item.querySelector('.faq-btn-accordion use');
+  if (svgUse) {
+    svgUse.setAttribute('href', `${spriteUrl}#icon-faq-down`);
+  }
 });
