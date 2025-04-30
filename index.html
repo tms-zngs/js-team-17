@@ -18,7 +18,7 @@
     <script type="module" crossorigin src="/js-team-17/index.js"></script>
     <link rel="modulepreload" crossorigin href="/js-team-17/assets/vendor-BgWgrTJC.js">
     <link rel="stylesheet" crossorigin href="/js-team-17/assets/vendor-Cgr4bB_E.css">
-    <link rel="stylesheet" crossorigin href="/js-team-17/assets/index-BkbBLLFX.css">
+    <link rel="stylesheet" crossorigin href="/js-team-17/assets/index-BJx15wdl.css">
   </head>
   <body>
     <header class="header">
@@ -772,15 +772,19 @@ working with me</h2>
                 <form id="contact-form">
                     <div class="email-container">
                         <label for="form-email" class="form-user-label"></label>
-                            <input
+                        <input
                             type="email"
                             class="form-email"
                             id="form-email"
                             name="form-email"
-                            pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})+\.([A-z]{2,8})"
+                            pattern="([A-Za-z0-9_.-]{1,})@([A-Za-z0-9_.-]{1,})+\.([A-Za-z]{2,8})"
                             placeholder="Your Email*"
                             required
-                            />
+                        />
+                        <svg id="email-valid-icon" class="valid-icon">
+                            <use href="/js-team-17/assets/sprite-Ci5rsj_u.svg#icon-form-checked"></use>
+                        </svg>
+                        <p id="email-error" class="error-message">Invalid email, try again</p>
                     </div>
                     <div class="message-container">
                         <label class="form-user-label" for="user-message"></label>
