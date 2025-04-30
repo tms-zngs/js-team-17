@@ -5,6 +5,26 @@ const form = document.getElementById('contact-form');
 const successModal = document.getElementById('success-modal');
 const closeModalBtn = document.querySelector('.close-modal');
 
+const emailInput = document.getElementById('form-email');
+const emailIcon = document.getElementById('email-valid-icon');
+const emailError = document.getElementById('email-error');
+
+emailInput.addEventListener('input', () => {
+  const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+  if (emailPattern.test(emailInput.value.trim())) {
+    emailInput.classList.remove('invalid');
+    emailIcon.classList.add('visible');
+    emailError.classList.remove('visible');
+    emailInput.style.color = 'var(--main-text-color)';
+  } else {
+    emailInput.classList.add('invalid');
+    emailIcon.classList.remove('visible');
+    emailError.classList.add('visible');
+    emailInput.style.color = '#e74a3b';
+  }
+});
+
 form.addEventListener('submit', async function (e) {
   e.preventDefault();
 
@@ -24,23 +44,40 @@ form.addEventListener('submit', async function (e) {
       }
     );
 
-    if (response.ok) {
-      openModal();
-      form.reset();
-    } else {
-      iziToast.warning({
-        title: 'Warning',
-        message: 'Check the data and try again',
-        position: 'topRight',
-        backgroundColor: '#FFB81C',
-        messageColor: '#3B3D40',
-        timeout: 5000,
-        progressBar: false,
-        close: true,
-        maxWidth: 400,
-        transitionIn: 'fadeInDown',
-        transitionOut: 'fadeOutUp',
-      });
+ if (response.ok) {
+   form.reset();
+   emailIcon.classList.remove('visible');
+   emailError.classList.remove('visible');
+   emailInput.style.color = 'var(--main-text-color)';
+   openModal();
+} else {
+  iziToast.warning({
+    title: 'Warning',
+    message: 'Check the data and try again',
+    position: "topRight",
+    backgroundColor: "#FFB81C",
+    messageColor: "#3B3D40",
+    timeout: 5000,
+    progressBar: false,
+    close: true,
+    maxWidth: 400,
+    transitionIn: 'fadeInDown',
+    transitionOut: 'fadeOutUp',
+  });
+ }
+} catch (error) {
+  iziToast.warning({
+    title: 'Network error',
+    message: 'Try again.',
+    position: "topRight",
+    backgroundColor: "#FFB81C",
+    messageColor: "#3B3D40",
+    timeout: 5000,
+    progressBar: false,
+    close: true,
+    transitionIn: 'fadeInDown',
+    transitionOut: 'fadeOutUp',
+  });
     }
   } catch (error) {
     iziToast.warning({
