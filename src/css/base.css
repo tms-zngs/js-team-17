@@ -20,6 +20,10 @@
     --error-color: #e74a3b; /* цвет текста ошибки */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -28,6 +32,7 @@ body {
   margin: 0;
   color: var(--main-text-color);
   background-color: var(--main-background-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-x: hidden;
 }
 

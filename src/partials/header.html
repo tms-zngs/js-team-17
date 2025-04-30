@@ -1,9 +1,9 @@
 <header class="header">
   <div class="container header-container">
-    <p class="logo"
-      >Lloyd
+    <h2 class="logo">
+      Lloyd
       <span class="logo-header-span">Jefferson.</span>
-    </p>
+    </h2>
     <div class="theme-toggle-div">
       <label id="switch" class="switch">
         <input type="checkbox" id="theme-toggle" />
@@ -12,9 +12,9 @@
     </div>
     <nav class="navigation">
       <ul class="nav-list-head">
-        <li class="nav-item-head"><a href="#">About Me</a></li>
-        <li class="nav-item-head"><a href="#">Project</a></li>
-        <li class="nav-item-head"><a href="#">Contacts</a></li>
+        <li class="nav-item-head"><a href="#about-me">About Me</a></li>
+        <li class="nav-item-head"><a href="#projects">Projects</a></li>
+        <li class="nav-item-head"><a href="#work-together">Contacts</a></li>
       </ul>
     </nav>
     <button type="button" class="burger-btn">
@@ -24,3 +24,31 @@
     </button>
   </div>
 </header>
+
+<!-- Mobile Menu -->
+
+<div class="modal-overlay">
+  <div class="mobile-menu">
+    <h2>
+      <a href="#" class="logo">
+        Lloyd
+        <span class="logo-header-span">Jefferson.</span>
+      </a>
+    </h2>
+    <button type="button" class="burger-btn modal-btn">
+      <svg class="icon-close" width="32" height="32">
+        <use href="/img/sprite.svg#icon-menu-close"></use>
+      </svg>
+    </button>
+  </div>
+  <ul class="nav-list">
+    <li class="nav-item"><a href="#about-me" class="modal-link">About me</a></li>
+    <li class="nav-item"><a href="#projects" class="modal-link">Projects</a></li>
+    <li class="nav-item"><a href="#work-together" class="modal-link">Contacts</a></li>
+  </ul>
+  <img
+    src="/img/decor/decor-hero-mobile.png"
+    alt="bg-header"
+    class="bg-header"
+  />
+</div>
