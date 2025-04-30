@@ -44,40 +44,26 @@ form.addEventListener('submit', async function (e) {
       }
     );
 
- if (response.ok) {
-   form.reset();
-   emailIcon.classList.remove('visible');
-   emailError.classList.remove('visible');
-   emailInput.style.color = 'var(--main-text-color)';
-   openModal();
-} else {
-  iziToast.warning({
-    title: 'Warning',
-    message: 'Check the data and try again',
-    position: "topRight",
-    backgroundColor: "#FFB81C",
-    messageColor: "#3B3D40",
-    timeout: 5000,
-    progressBar: false,
-    close: true,
-    maxWidth: 400,
-    transitionIn: 'fadeInDown',
-    transitionOut: 'fadeOutUp',
-  });
- }
-} catch (error) {
-  iziToast.warning({
-    title: 'Network error',
-    message: 'Try again.',
-    position: "topRight",
-    backgroundColor: "#FFB81C",
-    messageColor: "#3B3D40",
-    timeout: 5000,
-    progressBar: false,
-    close: true,
-    transitionIn: 'fadeInDown',
-    transitionOut: 'fadeOutUp',
-  });
+    if (response.ok) {
+      form.reset();
+      emailIcon.classList.remove('visible');
+      emailError.classList.remove('visible');
+      emailInput.style.color = 'var(--main-text-color)';
+      openModal();
+    } else {
+      iziToast.warning({
+        title: 'Warning',
+        message: 'Check the data and try again',
+        position: 'topRight',
+        backgroundColor: '#FFB81C',
+        messageColor: '#3B3D40',
+        timeout: 5000,
+        progressBar: false,
+        close: true,
+        maxWidth: 400,
+        transitionIn: 'fadeInDown',
+        transitionOut: 'fadeOutUp',
+      });
     }
   } catch (error) {
     iziToast.warning({
