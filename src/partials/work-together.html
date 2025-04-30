@@ -35,15 +35,19 @@
                 <form id="contact-form">
                     <div class="email-container">
                         <label for="form-email" class="form-user-label"></label>
-                            <input
+                        <input
                             type="email"
                             class="form-email"
                             id="form-email"
                             name="form-email"
-                            pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})+\.([A-z]{2,8})"
+                            pattern="([A-Za-z0-9_.-]{1,})@([A-Za-z0-9_.-]{1,})+\.([A-Za-z]{2,8})"
                             placeholder="Your Email*"
                             required
-                            />
+                        />
+                        <svg id="email-valid-icon" class="valid-icon">
+                            <use href="/img/sprite.svg#icon-form-checked"></use>
+                        </svg>
+                        <p id="email-error" class="error-message">Invalid email, try again</p>
                     </div>
                     <div class="message-container">
                         <label class="form-user-label" for="user-message"></label>

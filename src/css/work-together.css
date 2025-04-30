@@ -76,6 +76,51 @@
     fill: none;
 }
 
+.email-container {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.valid-icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  fill: var(--span-text-color);
+  right: 16px;
+  top: 16px;
+  pointer-events: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.valid-icon.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.error-message {
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #e74a3b;
+  bottom: -23px;
+  left: 18px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.error-message.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .form-email {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -89,7 +134,7 @@
     height: 48px;
     background: var(--grey-background-color);
     border-color: transparent;
-    margin-bottom: 32px;
+    /* margin-bottom: 32px; */
 }
 
 .form-message {

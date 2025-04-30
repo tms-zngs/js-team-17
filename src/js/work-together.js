@@ -5,6 +5,26 @@ const form = document.getElementById('contact-form');
 const successModal = document.getElementById('success-modal');
 const closeModalBtn = document.querySelector('.close-modal');
 
+const emailInput = document.getElementById('form-email');
+const emailIcon = document.getElementById('email-valid-icon');
+const emailError = document.getElementById('email-error');
+
+emailInput.addEventListener('input', () => {
+  const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+  if (emailPattern.test(emailInput.value.trim())) {
+    emailInput.classList.remove('invalid');
+    emailIcon.classList.add('visible');
+    emailError.classList.remove('visible');
+    emailInput.style.color = 'var(--main-text-color)';
+  } else {
+    emailInput.classList.add('invalid');
+    emailIcon.classList.remove('visible');
+    emailError.classList.add('visible');
+    emailInput.style.color = '#e74a3b';
+  }
+});
+
 form.addEventListener('submit', async function (e) {
   e.preventDefault();
 
@@ -22,8 +42,11 @@ form.addEventListener('submit', async function (e) {
     });
 
  if (response.ok) {
-  openModal();
-  form.reset();
+   form.reset();
+   emailIcon.classList.remove('visible');
+   emailError.classList.remove('visible');
+   emailInput.style.color = 'var(--main-text-color)';
+   openModal();
 } else {
   iziToast.warning({
     title: 'Warning',
