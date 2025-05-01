@@ -9,20 +9,32 @@ const emailInput = document.getElementById('form-email');
 const emailIcon = document.getElementById('email-valid-icon');
 const emailError = document.getElementById('email-error');
 
-emailInput.addEventListener('input', () => {
-  const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+let debounceTimer;
+function resetStyles() {
+  emailInput.classList.remove('invalid');
+  emailIcon.classList.remove('visible');
+  emailError.classList.remove('visible');
+  emailInput.style.color = '';
+}
 
-  if (emailPattern.test(emailInput.value.trim())) {
-    emailInput.classList.remove('invalid');
-    emailIcon.classList.add('visible');
-    emailError.classList.remove('visible');
-    emailInput.style.color = 'var(--main-text-color)';
-  } else {
-    emailInput.classList.add('invalid');
-    emailIcon.classList.remove('visible');
-    emailError.classList.add('visible');
-    emailInput.style.color = '#e74a3b';
-  }
+emailInput.addEventListener('input', () => {
+  clearTimeout(debounceTimer);
+
+  resetStyles();
+
+  debounceTimer = setTimeout(() => {
+    const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    const value = emailInput.value.trim();
+
+    if (emailPattern.test(value)) {
+      emailIcon.classList.add('visible');
+      emailInput.style.color = 'var(--main-text-color)';
+    } else {
+      emailInput.classList.add('invalid');
+      emailError.classList.add('visible');
+      emailInput.style.color = '#E74A3B';
+    }
+  }, 1000);
 });
 
 form.addEventListener('submit', async function (e) {
