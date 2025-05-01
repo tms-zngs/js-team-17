@@ -40,8 +40,8 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 12px;
-  width: 320px;
-  height: 380px;
+  max-width: 100%;
+  min-height: 380px;
   opacity: 1;
   transition: opacity 0.3s ease;
 }
@@ -52,8 +52,7 @@
 
 .project-item-img {
   border-radius: 16px;
-  width: 320px;
-  height: 184px;
+  min-height: 184px;
 }
 
 .project-title-botton {
@@ -62,8 +61,8 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 16px;
-  width: 320px;
-  height: 184px;
+  max-width: 100%;
+  min-height: 184px;
 }
 
 .projects-item-technologies {
@@ -72,8 +71,8 @@
   justify-content: space-between;
   flex-direction: column;
   gap: 16px;
-  width: 320px;
-  height: 144px;
+  max-width: 100%;
+  min-height: 144px;
 }
 
 .technologies-text {
@@ -94,8 +93,8 @@
   text-transform: uppercase;
   color: var(--main-text-color);
   margin: 0;
-  width: 320px;
-  height: 80px;
+  max-width: 100%;
+  min-height: 80px;
 }
 
 .projects-button-link {
@@ -105,8 +104,8 @@
   gap: 12px;
   border-radius: 8px;
   padding: 12px 24px;
-  width: 125px;
-  height: 48px;
+  max-width: 125px;
+  min-height: 48px;
   background-color: var(--grey-background-color);
   border: none;
   cursor: pointer;
@@ -165,8 +164,8 @@
 .load-more-line {
   fill: none;
   stroke: var(--span-text-color);
-  width: 107px;
-  height: 2px;
+  max-width: 107px;
+  min-height: 2px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -191,20 +190,17 @@
 
   .projects-item {
     gap: 16px;
-    width: 704px;
-    height: 512px;
+    min-height: 512px;
   }
 
   .project-item-img {
     border-radius: 24px;
-    width: 704px;
-    height: 404px;
+    min-height: 404px;
   }
 
   .project-title-botton {
     gap: 20px;
-    width: 704px;
-    height: 92px;
+    min-height: 92px;
   }
 
   .projects-item-technologies {
@@ -212,15 +208,14 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: row;
-    width: 704px;
-    height: 48px;
+    min-height: 48px;
   }
 
   .project-item-title {
     font-size: 34px;
     line-height: 1.33;
     letter-spacing: 0.01em;
-    width: 100%;
+    max-width: 100%;
   }
 
   .projects-button-link {
@@ -253,23 +248,19 @@
 
   .projects-item {
     gap: 26px;
-    width: 1008px;
-    height: 688px;
+    min-height: 688px;
   }
 
   .project-item-img {
-    width: 1008px;
-    height: 580px;
+    min-height: 580px;
   }
 
   .project-title-botton {
-    width: 1008px;
-    height: 92px;
+    min-height: 92px;
   }
 
   .projects-item-technologies {
-    width: 1008px;
-    height: 48px;
+    min-height: 48px;
   }
 
   .projects-button-link {
@@ -291,6 +282,6 @@
   }
 
   .load-more-line {
-    width: 119px;
+    max-width: 119px;
   }
 }
