@@ -201,14 +201,16 @@
   .project-title-botton {
     gap: 20px;
     min-height: 92px;
+    width: 704px;
   }
 
   .projects-item-technologies {
     justify-content: space-between;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: row;
     min-height: 48px;
+    width: 704px;
   }
 
   .project-item-title {
@@ -257,10 +259,12 @@
 
   .project-title-botton {
     min-height: 92px;
+    width: 1008px;
   }
 
   .projects-item-technologies {
     min-height: 48px;
+    width: 1008px;
   }
 
   .projects-button-link {
