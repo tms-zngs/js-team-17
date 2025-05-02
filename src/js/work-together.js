@@ -32,7 +32,7 @@ emailInput.addEventListener('input', () => {
     } else {
       emailInput.classList.add('invalid');
       emailError.classList.add('visible');
-      emailInput.style.color = 'var(--main-text-color)';
+      emailInput.style.color = 'var(--error-color)';
     }
   }, 1000);
 });
